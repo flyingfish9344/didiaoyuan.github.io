@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="本节目录:  使用隐式 Intent 隐式 Intent 的组成 执行操作 数据的位置 涉及的数据类型 可选类别   ShareCompat">
+<meta name="description" content="本节目录:  使用隐式 Intent 隐式 Intent 的组成 执行操作 数据的位置 涉及的数据类型 可选类别   一些实例">
 <meta name="keywords" content="Android,intent">
 <meta property="og:type" content="article">
 <meta property="og:title" content="隐式 Intent">
 <meta property="og:url" content="http://blog.didiaoyuan.com/2017/10/12/隐式-Intent/index.html">
 <meta property="og:site_name" content="仙人掌的博客">
-<meta property="og:description" content="本节目录:  使用隐式 Intent 隐式 Intent 的组成 执行操作 数据的位置 涉及的数据类型 可选类别   ShareCompat">
+<meta property="og:description" content="本节目录:  使用隐式 Intent 隐式 Intent 的组成 执行操作 数据的位置 涉及的数据类型 可选类别   一些实例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-12T12:04:13.651Z">
+<meta property="og:updated_time" content="2017-10-12T12:29:33.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="隐式 Intent">
-<meta name="twitter:description" content="本节目录:  使用隐式 Intent 隐式 Intent 的组成 执行操作 数据的位置 涉及的数据类型 可选类别   ShareCompat">
+<meta name="twitter:description" content="本节目录:  使用隐式 Intent 隐式 Intent 的组成 执行操作 数据的位置 涉及的数据类型 可选类别   一些实例">
 
 
 
@@ -446,12 +446,40 @@
 <li>可选类别</li>
 </ul>
 </li>
-<li>ShareCompat</li>
+<li>一些实例</li>
 </ol>
 <a id="more"></a>
 <blockquote>
 <p>最近学习《Android 权威编著》,这几天学的总结一下，加深印象，也是方便以后忘记了，能快速找到相关内容，本节主要是关于 隐式 Intent 的使用</p>
 </blockquote>
+<h1 id="使用隐式-Intent"><a href="#使用隐式-Intent" class="headerlink" title="使用隐式 Intent"></a>使用隐式 Intent</h1><p>隐式 Intent 区别与显示 Intent 的主要区别在于，在实现 Intent 通信我们不需要想显示 Intent 提供以及编写指定具体的 activity，只需要告诉操作系统我们想要做什么，通过系统内置的属性就可以简单实现我们想要的。</p>
+<h1 id="隐式-Intent-的组成"><a href="#隐式-Intent-的组成" class="headerlink" title="隐式 Intent 的组成"></a>隐式 Intent 的组成</h1><h3 id="执行操作"><a href="#执行操作" class="headerlink" title="执行操作"></a>执行操作</h3><p>通常 Intent 类中的常量来表示。</p>
+<ul>
+<li>Intent.ACTION_VIEW 查看某个 URL</li>
+<li>Intent.ACTION_SEND 发送邮件</li>
+<li>Intent.ACTION_DITL 拨号界面等待拨号</li>
+<li>Intent.ACTION_CALL 拨打电话</li>
+</ul>
+<h3 id="数据的位置"><a href="#数据的位置" class="headerlink" title="数据的位置"></a>数据的位置</h3><ol>
+<li>设备外的资源使用 URL</li>
+<li>指向文件的 URI</li>
+<li>指向 ContentProvider 中的某个内容 URI (content URI)</li>
+</ol>
+<h3 id="涉及的数据类型"><a href="#涉及的数据类型" class="headerlink" title="涉及的数据类型"></a>涉及的数据类型</h3><p>MIME 数据类型，如 text/html , audio/mpeg3.如果一个 intent 包含数据位置，那么通常可以从中推测出数据的类型</p>
+<p><a href="https://baike.baidu.com/item/MIME/2900607?fr=aladdin" target="_blank" rel="external">关于 MIME</a></p>
+<h3 id="可选类别"><a href="#可选类别" class="headerlink" title="可选类别"></a>可选类别</h3><p>如果操作用于描述具体要做什么，那么通常用来描述我们是何时、何地或者如何使用某个 activity 的。</p>
+<ol>
+<li>通过简单的 Intent</li>
+<li>通过配置文件的 intent 过滤器</li>
+</ol>
+<h1 id="一些实例"><a href="#一些实例" class="headerlink" title="一些实例"></a>一些实例</h1><ul>
+<li>打开短信，发送消息</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Intent i = <span class="keyword">new</span> Intent(Intent.ACTION_SEND);</div><div class="line">i.setType(<span class="string">"text/plain"</span>);</div><div class="line"><span class="comment">/*添加正文内容*/</span></div><div class="line">i.putExtra(Intent.EXTRA_TEXT, <span class="string">"TEXT"</span>);</div><div class="line">i.putExtra(Intent.EXTRA_SUBJECT, <span class="string">"SUBJECT"</span>);</div><div class="line">i = Intent.createChooser(i, <span class="string">"选择你想使用的应用"</span>);</div><div class="line">startActivity(i);</div></pre></td></tr></table></figure>
+<p>使用 ShareCompat 类创建发送消息<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ShareCompat.IntentBuilder intentBuilder = ShareCompat.IntentBuilder.from(getActivity());</div><div class="line">                intentBuilder.setType(<span class="string">"text/plain"</span>);</div><div class="line">                intentBuilder.setText(<span class="string">"text"</span>);</div><div class="line">                intentBuilder.setSubject(<span class="string">"what"</span>);</div><div class="line">                intentBuilder.setChooserTitle(<span class="string">"select"</span>);</div><div class="line">                intentBuilder.startChooser();</div></pre></td></tr></table></figure></p>
+<ul>
+<li>打开联系人，选择联系人</li>
+</ul>
 
       
     </div>
@@ -574,8 +602,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/me.jpg"
@@ -666,6 +703,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用隐式-Intent"><span class="nav-number">1.</span> <span class="nav-text">使用隐式 Intent</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐式-Intent-的组成"><span class="nav-number">2.</span> <span class="nav-text">隐式 Intent 的组成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#执行操作"><span class="nav-number">2.0.1.</span> <span class="nav-text">执行操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的位置"><span class="nav-number">2.0.2.</span> <span class="nav-text">数据的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#涉及的数据类型"><span class="nav-number">2.0.3.</span> <span class="nav-text">涉及的数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可选类别"><span class="nav-number">2.0.4.</span> <span class="nav-text">可选类别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些实例"><span class="nav-number">3.</span> <span class="nav-text">一些实例</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
