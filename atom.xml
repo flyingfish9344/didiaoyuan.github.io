@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.didiaoyuan.com/"/>
-  <updated>2017-10-12T08:05:44.552Z</updated>
+  <updated>2017-10-12T12:04:13.651Z</updated>
   <id>http://blog.didiaoyuan.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>隐式 Intent</title>
+    <link href="http://blog.didiaoyuan.com/2017/10/12/%E9%9A%90%E5%BC%8F-Intent/"/>
+    <id>http://blog.didiaoyuan.com/2017/10/12/隐式-Intent/</id>
+    <published>2017-10-12T11:56:28.000Z</published>
+    <updated>2017-10-12T12:04:13.651Z</updated>
+    
+    <content type="html"><![CDATA[<p>本节目录:</p><ol><li>使用隐式 Intent</li><li>隐式 Intent 的组成<ul><li>执行操作</li><li>数据的位置</li><li>涉及的数据类型</li><li>可选类别</li></ul></li><li>ShareCompat</li></ol><a id="more"></a><blockquote><p>最近学习《Android 权威编著》,这几天学的总结一下，加深印象，也是方便以后忘记了，能快速找到相关内容，本节主要是关于 隐式 Intent 的使用</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本节目录:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用隐式 Intent&lt;/li&gt;
+&lt;li&gt;隐式 Intent 的组成&lt;ul&gt;
+&lt;li&gt;执行操作&lt;/li&gt;
+&lt;li&gt;数据的位置&lt;/li&gt;
+&lt;li&gt;涉及的数据类型&lt;/li&gt;
+&lt;li&gt;可选类别&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ShareCompat&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://blog.didiaoyuan.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://blog.didiaoyuan.com/tags/Android/"/>
+    
+      <category term="intent" scheme="http://blog.didiaoyuan.com/tags/intent/"/>
+    
+  </entry>
   
   <entry>
     <title>常用的字体表情</title>
