@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.didiaoyuan.com/"/>
-  <updated>2017-10-12T12:38:02.397Z</updated>
+  <updated>2017-10-15T05:10:43.462Z</updated>
   <id>http://blog.didiaoyuan.com/</id>
   
   <author>
@@ -15,6 +15,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Excel 初学宏</title>
+    <link href="http://blog.didiaoyuan.com/2017/10/15/Excel-%E5%88%9D%E5%AD%A6%E5%AE%8F/"/>
+    <id>http://blog.didiaoyuan.com/2017/10/15/Excel-初学宏/</id>
+    <published>2017-10-15T05:10:43.000Z</published>
+    <updated>2017-10-15T05:10:43.462Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android Master-Detail</title>
+    <link href="http://blog.didiaoyuan.com/2017/10/14/Android-Master-Detail/"/>
+    <id>http://blog.didiaoyuan.com/2017/10/14/Android-Master-Detail/</id>
+    <published>2017-10-14T07:05:48.000Z</published>
+    <updated>2017-10-14T07:06:39.712Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="主从用户界面"><a href="#主从用户界面" class="headerlink" title="主从用户界面"></a>主从用户界面</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;主从用户界面&quot;&gt;&lt;a href=&quot;#主从用户界面&quot; class=&quot;headerlink&quot; title=&quot;主从用户界面&quot;&gt;&lt;/a&gt;主从用户界面&lt;/h1&gt;
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://blog.didiaoyuan.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://blog.didiaoyuan.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 快速记忆总结</title>
+    <link href="http://blog.didiaoyuan.com/2017/10/14/Android-%E5%BF%AB%E9%80%9F%E8%AE%B0%E5%BF%86/"/>
+    <id>http://blog.didiaoyuan.com/2017/10/14/Android-快速记忆/</id>
+    <published>2017-10-14T05:59:19.000Z</published>
+    <updated>2017-10-14T07:05:05.013Z</updated>
+    
+    <content type="html"><![CDATA[<p>本节目录:</p><pre><code>1. 托管 UI fragment2. 使用 RecyclerView3. 使用 fragment argument4. 使用 ViewPager5. 使用 DialogFragmen</code></pre><a id="more"></a><h1 id="托管-UI-fragment"><a href="#托管-UI-fragment" class="headerlink" title="托管 UI fragment"></a>托管 UI fragment</h1><h2 id="fragment的生命周期"><a href="#fragment的生命周期" class="headerlink" title="fragment的生命周期"></a>fragment的生命周期</h2><h2 id="托管的两种方式"><a href="#托管的两种方式" class="headerlink" title="托管的两种方式"></a>托管的两种方式</h2><h2 id="fragment-使用"><a href="#fragment-使用" class="headerlink" title="fragment 使用"></a>fragment 使用</h2><pre><code>- 定义容器视图(FrameLayout)- 创建 UI fragment        - 定义布局文件中的组件        - 创建 fragment 类并设置其视图为定义的布局        - 通过代码，实例化布局中的组件</code></pre><h1 id="添加-UI-fragment-到-FragmentManager"><a href="#添加-UI-fragment-到-FragmentManager" class="headerlink" title="添加 UI fragment 到 FragmentManager"></a>添加 UI fragment 到 FragmentManager</h1><h2 id="FragmentManager的概念"><a href="#FragmentManager的概念" class="headerlink" title="FragmentManager的概念"></a>FragmentManager的概念</h2><h2 id="FragmentManager的管理"><a href="#FragmentManager的管理" class="headerlink" title="FragmentManager的管理"></a>FragmentManager的管理</h2><pre><code>1. fragment 队列2. fragment 事务回退栈</code></pre><h2 id="fragment-事务"><a href="#fragment-事务" class="headerlink" title="fragment 事务"></a>fragment 事务</h2><h2 id="FragmentManager-与-fragment-的生命周期"><a href="#FragmentManager-与-fragment-的生命周期" class="headerlink" title="FragmentManager 与 fragment 的生命周期"></a>FragmentManager 与 fragment 的生命周期</h2><hr><p> 使用 RecyclerView 显示列表</p><h1 id="使用抽象-activity-托管-fragment（将相同的activity-将重复部分封装为抽象类，每个-activity-都继承这个抽象类）"><a href="#使用抽象-activity-托管-fragment（将相同的activity-将重复部分封装为抽象类，每个-activity-都继承这个抽象类）" class="headerlink" title="使用抽象 activity 托管 fragment（将相同的activity 将重复部分封装为抽象类，每个 activity 都继承这个抽象类）"></a>使用抽象 activity 托管 fragment（将相同的activity 将重复部分封装为抽象类，每个 activity 都继承这个抽象类）</h1><h1 id="RecyclerView、Adapter-和-ViewHolder"><a href="#RecyclerView、Adapter-和-ViewHolder" class="headerlink" title="RecyclerView、Adapter 和 ViewHolder"></a>RecyclerView、Adapter 和 ViewHolder</h1><h2 id="ViewHolder-和-Adapter"><a href="#ViewHolder-和-Adapter" class="headerlink" title="ViewHolder 和 Adapter"></a>ViewHolder 和 Adapter</h2><pre><code>- viewholder-adapter</code></pre><h1 id="使用-RecyclerView"><a href="#使用-RecyclerView" class="headerlink" title="使用 RecyclerView"></a>使用 RecyclerView</h1><pre><code>- 导入依赖- 定义容器视图(RecyclerView)- 通过代码实例化视图(onCreateView方法中，需要 LayoutManager 的支持)- 定义 ViewHolder 的内部类 （继承 RecyclerView.ViewHolder）- 创建 adapter 的内部类 ( 继承 RecyclerView.Adapter&lt;ViewHolder&gt; )1.  onCreateViewHolder() --需要使用列表布局2. onBindViewHolder()3. getItemCount()- 给 RecyclerView 设置适配器</code></pre><h1 id="响应点击"><a href="#响应点击" class="headerlink" title="响应点击"></a>响应点击</h1><p>验证每个 ItemView 是否有效</p><pre><code>- 添加 View.OnClickerListerner 接口- 覆写 onClick 方法- 给每个 ItemView 设置监听器</code></pre><hr><h1 id="使用-fragment-argument"><a href="#使用-fragment-argument" class="headerlink" title="使用 fragment argument"></a>使用 fragment argument</h1><p>每个 fragment 实例都可附带一个 Bundle 对象。格式为键值对形式，一个键值对即一个 argument</p><ul><li>先创建 Bundle</li><li>使用 bundle put 类型方法，将 argument 添加到 bundle 中</li></ul><p>code</p><h1 id="附加-argument-给-fragment"><a href="#附加-argument-给-fragment" class="headerlink" title="附加 argument 给 fragment"></a>附加 argument 给 fragment</h1><p>格式： Fragment.setArguments(Bundle)<br>必须在 fragment 创建后、添加给 activity 前完成</p><p>利用 getArguments（）.get 获取</p><h1 id="通过-fragment-获取返回结果"><a href="#通过-fragment-获取返回结果" class="headerlink" title="通过 fragment 获取返回结果"></a>通过 fragment 获取返回结果</h1><p>类似与 Activity 调用 startActivityForResult() ,转而调用 Fragment.startActivityForResult()<br>接受也是从 Activity 到 Fragment 中，其中要注意的是 fragment 对返回结果处理不同</p><pre><code>- 自身无法持有返回结果，只用 activity 拥有返回结果</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p183</div></pre></td></tr></table></figure><hr><h1 id="使用-ViewPager"><a href="#使用-ViewPager" class="headerlink" title="使用 ViewPager"></a>使用 ViewPager</h1><ul><li>创建 一个 ViewPager 类</li><li>定义容器组件</li><li>在 ViewPager 关联 ViewPager 和 adapter</li><li>修改</li></ul><h1 id="ViewPager-和-PagerAdapter"><a href="#ViewPager-和-PagerAdapter" class="headerlink" title="ViewPager 和 PagerAdapter"></a>ViewPager 和 PagerAdapter</h1><h2 id="PagerAdapter-子类-FragmentStatePagerAdapter"><a href="#PagerAdapter-子类-FragmentStatePagerAdapter" class="headerlink" title="PagerAdapter 子类 FragmentStatePagerAdapter"></a>PagerAdapter 子类 FragmentStatePagerAdapter</h2><p>FragmentStatePagerAdapter 的抽象方法</p><ul><li>getCount()</li><li>getItem(int)<br>还有实例需要 FragmentManager</li></ul><hr><h1 id="使用-DialogFragment"><a href="#使用-DialogFragment" class="headerlink" title="使用 DialogFragment"></a>使用 DialogFragment</h1><pre><code>1. 创建 DialogFragment 类2. 继承 DialogFragment3. 覆写 onCreateDialog 方法4. 方法内返回 AlertDialog.builder 创建的 Builder 对象（setView-setTitle-setPositiveButton）5. 创建 FragmentManager6. show(manger,xxx) 显示对话框</code></pre><hr><h1 id="工具栏菜单"><a href="#工具栏菜单" class="headerlink" title="工具栏菜单"></a>工具栏菜单</h1><pre><code>1. 定义 XML 菜单文件2. onCreateOptionsMenu()方法创建菜单3. onOptionsItemSelected（）对菜单进行操作处理</code></pre><p>实现层级式导航</p><pre><code>1. 在注册文件清单上向详情 Activity 上添加 向上按钮parentActivityName（）</code></pre><hr><h1 id="SQLite-数据库"><a href="#SQLite-数据库" class="headerlink" title="SQLite 数据库"></a>SQLite 数据库</h1><pre><code>1. 创建一个数据库表字段的类2. 创建初始化数据库，用到SQLiteOpenHelper类3. 覆写两个方法，一个 onCreate 创建数据库 一个 onUpgrade创建数据库4. 初始化数据库并授权权限5. ContentValues 负责处理数据库写入和更新操作。格式为键值对数据（这个类用户数据库操作使用）6. 数据库的insert update delete 操作</code></pre><hr><h1 id="CursorWrapper-类"><a href="#CursorWrapper-类" class="headerlink" title="CursorWrapper 类"></a>CursorWrapper 类</h1><p>封装数据表的原始数据 从cursor 获取数据</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本节目录:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 托管 UI fragment
+2. 使用 RecyclerView
+3. 使用 fragment argument
+4. 使用 ViewPager
+5. 使用 DialogFragmen
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>隐式 Intent</title>
@@ -568,9 +631,9 @@
     
       <category term="git" scheme="http://blog.didiaoyuan.com/tags/git/"/>
     
-      <category term="分布式" scheme="http://blog.didiaoyuan.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
       <category term="版本控制" scheme="http://blog.didiaoyuan.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    
+      <category term="分布式" scheme="http://blog.didiaoyuan.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
   </entry>
   
