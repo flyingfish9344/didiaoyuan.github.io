@@ -89,20 +89,20 @@
 
 
 
-<meta name="description" content="主从用户界面本来对应手机设备，一般都是单版面，上图这种双版面可以叫做主从界面 增加布局灵活性 手机的布局都是单版面(single-pane) 在平板上，因为同时显示主从用户的界面，我们需要生成双版面(two-pane)布局  如何实现?  修改托管 fragment 的 setContentView 方法 创建两个 fragment 容器布局 修改托管的 Activity 实现在手机中显示单版面，">
+<meta name="description" content="本节目录:  主从用户界面 增加布局灵活性 使用别名系统 fragment 回调接口  主从用户界面本来对应手机设备，一般都是单版面，上图这种双版面可以叫做主从界面 增加布局灵活性 手机的布局都是单版面(single-pane) 在平板上，因为同时显示主从用户的界面，我们需要生成双版面(two-pane)布局  如何实现?  修改托管 fragment 的 setContentView 方法 创建">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android Master-Detail">
 <meta property="og:url" content="http://blog.didiaoyuan.com/2017/10/14/Android-Master-Detail/index.html">
 <meta property="og:site_name" content="仙人掌的博客">
-<meta property="og:description" content="主从用户界面本来对应手机设备，一般都是单版面，上图这种双版面可以叫做主从界面 增加布局灵活性 手机的布局都是单版面(single-pane) 在平板上，因为同时显示主从用户的界面，我们需要生成双版面(two-pane)布局  如何实现?  修改托管 fragment 的 setContentView 方法 创建两个 fragment 容器布局 修改托管的 Activity 实现在手机中显示单版面，">
+<meta property="og:description" content="本节目录:  主从用户界面 增加布局灵活性 使用别名系统 fragment 回调接口  主从用户界面本来对应手机设备，一般都是单版面，上图这种双版面可以叫做主从界面 增加布局灵活性 手机的布局都是单版面(single-pane) 在平板上，因为同时显示主从用户的界面，我们需要生成双版面(two-pane)布局  如何实现?  修改托管 fragment 的 setContentView 方法 创建">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006rAlqhly1fkk15mhdb2j30ml0cymz0.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006rAlqhly1fkk085hx55j309h04kjrg.jpg">
-<meta property="og:updated_time" content="2017-10-16T05:39:35.708Z">
+<meta property="og:updated_time" content="2017-10-16T05:52:11.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Master-Detail">
-<meta name="twitter:description" content="主从用户界面本来对应手机设备，一般都是单版面，上图这种双版面可以叫做主从界面 增加布局灵活性 手机的布局都是单版面(single-pane) 在平板上，因为同时显示主从用户的界面，我们需要生成双版面(two-pane)布局  如何实现?  修改托管 fragment 的 setContentView 方法 创建两个 fragment 容器布局 修改托管的 Activity 实现在手机中显示单版面，">
+<meta name="twitter:description" content="本节目录:  主从用户界面 增加布局灵活性 使用别名系统 fragment 回调接口  主从用户界面本来对应手机设备，一般都是单版面，上图这种双版面可以叫做主从界面 增加布局灵活性 手机的布局都是单版面(single-pane) 在平板上，因为同时显示主从用户的界面，我们需要生成双版面(two-pane)布局  如何实现?  修改托管 fragment 的 setContentView 方法 创建">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006rAlqhly1fkk15mhdb2j30ml0cymz0.jpg">
 
 
@@ -439,7 +439,14 @@
       
 
       
-        <h1 id="主从用户界面"><a href="#主从用户界面" class="headerlink" title="主从用户界面"></a>主从用户界面</h1><p><img src="http://ww1.sinaimg.cn/large/006rAlqhly1fkk15mhdb2j30ml0cymz0.jpg" alt=""><br>本来对应手机设备，一般都是单版面，上图这种双版面可以叫做主从界面</p>
+        <p>本节目录:</p>
+<ol>
+<li>主从用户界面</li>
+<li>增加布局灵活性</li>
+<li>使用别名系统</li>
+<li>fragment 回调接口</li>
+</ol>
+<h1 id="主从用户界面"><a href="#主从用户界面" class="headerlink" title="主从用户界面"></a>主从用户界面</h1><p><img src="http://ww1.sinaimg.cn/large/006rAlqhly1fkk15mhdb2j30ml0cymz0.jpg" alt=""><br>本来对应手机设备，一般都是单版面，上图这种双版面可以叫做主从界面</p>
 <h1 id="增加布局灵活性"><a href="#增加布局灵活性" class="headerlink" title="增加布局灵活性"></a>增加布局灵活性</h1><ol>
 <li>手机的布局都是单版面(single-pane)</li>
 <li>在平板上，因为同时显示主从用户的界面，我们需要生成双版面(two-pane)布局</li>
@@ -632,7 +639,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -641,7 +648,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
