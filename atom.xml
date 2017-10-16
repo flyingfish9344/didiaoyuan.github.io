@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.didiaoyuan.com/"/>
-  <updated>2017-10-15T06:04:41.628Z</updated>
+  <updated>2017-10-15T06:20:21.764Z</updated>
   <id>http://blog.didiaoyuan.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android 虚拟机和 Docker 虚拟机冲突</title>
+    <link href="http://blog.didiaoyuan.com/2017/10/15/Android-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C-Docker-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%86%B2%E7%AA%81/"/>
+    <id>http://blog.didiaoyuan.com/2017/10/15/Android-虚拟机和-Docker-虚拟机冲突/</id>
+    <published>2017-10-15T06:20:21.000Z</published>
+    <updated>2017-10-15T06:20:21.764Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Excel 初学宏</title>
@@ -50,15 +64,15 @@
     <link href="http://blog.didiaoyuan.com/2017/10/14/Android-Master-Detail/"/>
     <id>http://blog.didiaoyuan.com/2017/10/14/Android-Master-Detail/</id>
     <published>2017-10-14T07:05:48.000Z</published>
-    <updated>2017-10-14T07:06:39.712Z</updated>
+    <updated>2017-10-16T05:39:35.708Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="主从用户界面"><a href="#主从用户界面" class="headerlink" title="主从用户界面"></a>主从用户界面</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="主从用户界面"><a href="#主从用户界面" class="headerlink" title="主从用户界面"></a>主从用户界面</h1><p><img src="http://ww1.sinaimg.cn/large/006rAlqhly1fkk15mhdb2j30ml0cymz0.jpg" alt=""><br>本来对应手机设备，一般都是单版面，上图这种双版面可以叫做主从界面</p><h1 id="增加布局灵活性"><a href="#增加布局灵活性" class="headerlink" title="增加布局灵活性"></a>增加布局灵活性</h1><ol><li>手机的布局都是单版面(single-pane)</li><li>在平板上，因为同时显示主从用户的界面，我们需要生成双版面(two-pane)布局</li></ol><p>如何实现?</p><ol><li>修改托管 fragment 的 setContentView 方法</li><li>创建两个 fragment 容器布局</li><li>修改托管的 Activity 实现在手机中显示单版面，在平板上实例化双版面</li></ol><p>具体到项目:</p><blockquote><ol><li>修改布局，从单版面修改为双版面</li><li>给父类 SimpleFragmentActivity 中的加载 fragment 改为 获取布局的方法</li><li>分别给水平，垂直布局修改布局</li><li>覆写 getLayoutResID 返回 需要加载的布局</li></ol></blockquote><h1 id="使用别名系统"><a href="#使用别名系统" class="headerlink" title="使用别名系统"></a>使用别名系统</h1><p>别名系统是一种指向其他资源的特殊资源</p><ol><li>在 res/values 创建refs.xml 别名资源文件</li><li><p>创建默认的别名资源值</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"activity_masterdetail"</span> <span class="attr">type</span>=<span class="string">"layout"</span>&gt;</span></div><div class="line">        @layout/activity_fragment</div><div class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></div></pre></td></tr></table></figure></li><li><p>创建规定屏幕范围的资源值<br><img src="http://ww1.sinaimg.cn/large/006rAlqhly1fkk085hx55j309h04kjrg.jpg" alt=""></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"activity_masterdetail"</span> <span class="attr">type</span>=<span class="string">"layout"</span>&gt;</span></div><div class="line">        @layout/activity_twopane</div><div class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></div></pre></td></tr></table></figure></li></ol><p>上面两种别名资源，可以通过设备屏幕的大小改变不同的布局文件。</p><ul><li>当屏幕小于 600dp 将使用 R.layout.activity_fragment 单版面布局</li><li>当屏幕大学 600dp 将使用 R.layout.activity_twopane<br>双版面的布局</li></ul><h1 id="fragment-回调接口"><a href="#fragment-回调接口" class="headerlink" title="fragment 回调接口"></a>fragment 回调接口</h1>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;主从用户界面&quot;&gt;&lt;a href=&quot;#主从用户界面&quot; class=&quot;headerlink&quot; title=&quot;主从用户界面&quot;&gt;&lt;/a&gt;主从用户界面&lt;/h1&gt;
+        &lt;h1 id=&quot;主从用户界面&quot;&gt;&lt;a href=&quot;#主从用户界面&quot; class=&quot;headerlink&quot; title=&quot;主从用户界面&quot;&gt;&lt;/a&gt;主从用户界面&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006rAlqhly1fkk15
       
     
     </summary>
@@ -647,9 +661,9 @@
     
       <category term="git" scheme="http://blog.didiaoyuan.com/tags/git/"/>
     
-      <category term="版本控制" scheme="http://blog.didiaoyuan.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
-    
       <category term="分布式" scheme="http://blog.didiaoyuan.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+      <category term="版本控制" scheme="http://blog.didiaoyuan.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     
   </entry>
   
@@ -724,9 +738,9 @@
     
       <category term="版本控制" scheme="http://blog.didiaoyuan.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     
-      <category term="SVN" scheme="http://blog.didiaoyuan.com/tags/SVN/"/>
-    
       <category term="svn" scheme="http://blog.didiaoyuan.com/tags/svn/"/>
+    
+      <category term="SVN" scheme="http://blog.didiaoyuan.com/tags/SVN/"/>
     
   </entry>
   
