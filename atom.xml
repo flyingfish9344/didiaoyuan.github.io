@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.didiaoyuan.com/"/>
-  <updated>2017-10-17T10:49:52.651Z</updated>
+  <updated>2017-10-18T14:15:32.860Z</updated>
   <id>http://blog.didiaoyuan.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vultr 搭建 VPS</title>
+    <link href="http://blog.didiaoyuan.com/2017/10/18/Vultr-%E6%90%AD%E5%BB%BA-VPS/"/>
+    <id>http://blog.didiaoyuan.com/2017/10/18/Vultr-搭建-VPS/</id>
+    <published>2017-10-18T14:15:32.000Z</published>
+    <updated>2017-10-18T14:15:32.860Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Excel VBA 速记</title>
@@ -703,9 +717,9 @@
       <category term="Git笔记" scheme="http://blog.didiaoyuan.com/categories/Git%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="git" scheme="http://blog.didiaoyuan.com/tags/git/"/>
-    
       <category term="版本控制" scheme="http://blog.didiaoyuan.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    
+      <category term="git" scheme="http://blog.didiaoyuan.com/tags/git/"/>
     
       <category term="分布式" scheme="http://blog.didiaoyuan.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
