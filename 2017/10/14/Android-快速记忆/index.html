@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="仙人掌的博客">
 <meta property="og:description" content="本节目录:  托管 UI fragment 使用 RecyclerView 使用 fragment argument 使用 ViewPager 使用 DialogFragmen">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-15T06:08:09.861Z">
+<meta property="og:updated_time" content="2017-10-19T07:41:23.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 快速记忆总结">
 <meta name="twitter:description" content="本节目录:  托管 UI fragment 使用 RecyclerView 使用 fragment argument 使用 ViewPager 使用 DialogFragmen">
@@ -425,10 +425,10 @@
 <p>在初学 android 中总是记不住一个控件的使用，用法，通过这种提纲加一点详细说明的方式，方便以后再开发中，快速找到和回忆起相关操作，减少百度查资料的时间。可能总结的不是那么完善，通过后期不断的翻看，以及实践过程中的不断使用，完善这种总结。</p>
 </blockquote>
 <h1 id="托管-UI-fragment"><a href="#托管-UI-fragment" class="headerlink" title="托管 UI fragment"></a>托管 UI fragment</h1><h2 id="fragment的生命周期"><a href="#fragment的生命周期" class="headerlink" title="fragment的生命周期"></a>fragment的生命周期</h2><h2 id="托管的两种方式"><a href="#托管的两种方式" class="headerlink" title="托管的两种方式"></a>托管的两种方式</h2><h2 id="fragment-使用"><a href="#fragment-使用" class="headerlink" title="fragment 使用"></a>fragment 使用</h2><pre><code>- 定义容器视图(FrameLayout)
-- 创建 UI fragment
-        - 定义布局文件中的组件
-        - 创建 fragment 类并设置其视图为定义的布局
-        - 通过代码，实例化布局中的组件
+- 创建 UI fragment 类
+        - onCreateView 定义布局文件中的组件
+        - 将 fragment 添加到 托管actiivty中 FragmentManager(负责发 fragment添加到 activity 视图层级结构)
+        - fragment 事务组装用户界面
 </code></pre><h1 id="添加-UI-fragment-到-FragmentManager"><a href="#添加-UI-fragment-到-FragmentManager" class="headerlink" title="添加 UI fragment 到 FragmentManager"></a>添加 UI fragment 到 FragmentManager</h1><h2 id="FragmentManager的概念"><a href="#FragmentManager的概念" class="headerlink" title="FragmentManager的概念"></a>FragmentManager的概念</h2><h2 id="FragmentManager的管理"><a href="#FragmentManager的管理" class="headerlink" title="FragmentManager的管理"></a>FragmentManager的管理</h2><pre><code>1. fragment 队列
 2. fragment 事务回退栈
 </code></pre><h2 id="fragment-事务"><a href="#fragment-事务" class="headerlink" title="fragment 事务"></a>fragment 事务</h2><h2 id="FragmentManager-与-fragment-的生命周期"><a href="#FragmentManager-与-fragment-的生命周期" class="headerlink" title="FragmentManager 与 fragment 的生命周期"></a>FragmentManager 与 fragment 的生命周期</h2><hr>
