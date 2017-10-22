@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="仙人掌的博客">
 <meta property="og:description" content="本节目录:  托管 UI fragment 使用 RecyclerView 使用 fragment argument 使用 ViewPager 使用 DialogFragmen">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-19T07:41:23.747Z">
+<meta property="og:updated_time" content="2017-10-22T05:13:32.751Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 快速记忆总结">
 <meta name="twitter:description" content="本节目录:  托管 UI fragment 使用 RecyclerView 使用 fragment argument 使用 ViewPager 使用 DialogFragmen">
@@ -433,6 +433,8 @@
 2. fragment 事务回退栈
 </code></pre><h2 id="fragment-事务"><a href="#fragment-事务" class="headerlink" title="fragment 事务"></a>fragment 事务</h2><h2 id="FragmentManager-与-fragment-的生命周期"><a href="#FragmentManager-与-fragment-的生命周期" class="headerlink" title="FragmentManager 与 fragment 的生命周期"></a>FragmentManager 与 fragment 的生命周期</h2><hr>
 <p> 使用 RecyclerView 显示列表</p>
+<blockquote>
+<p>基本流程： 创建Adapter 获取模型层数据并绑定 ViewHolder 给视图，然后将 Adapter 添加个 RecyclerView</p>
 <h1 id="使用抽象-activity-托管-fragment（将相同的activity-将重复部分封装为抽象类，每个-activity-都继承这个抽象类）"><a href="#使用抽象-activity-托管-fragment（将相同的activity-将重复部分封装为抽象类，每个-activity-都继承这个抽象类）" class="headerlink" title="使用抽象 activity 托管 fragment（将相同的activity 将重复部分封装为抽象类，每个 activity 都继承这个抽象类）"></a>使用抽象 activity 托管 fragment（将相同的activity 将重复部分封装为抽象类，每个 activity 都继承这个抽象类）</h1><h1 id="RecyclerView、Adapter-和-ViewHolder"><a href="#RecyclerView、Adapter-和-ViewHolder" class="headerlink" title="RecyclerView、Adapter 和 ViewHolder"></a>RecyclerView、Adapter 和 ViewHolder</h1><h2 id="ViewHolder-和-Adapter"><a href="#ViewHolder-和-Adapter" class="headerlink" title="ViewHolder 和 Adapter"></a>ViewHolder 和 Adapter</h2><pre><code>- viewholder
 -adapter
 </code></pre><h1 id="使用-RecyclerView"><a href="#使用-RecyclerView" class="headerlink" title="使用 RecyclerView"></a>使用 RecyclerView</h1><pre><code>- 导入依赖
@@ -440,8 +442,8 @@
 - 通过代码实例化视图(onCreateView方法中，需要 LayoutManager 的支持)
 - 定义 ViewHolder 的内部类 （继承 RecyclerView.ViewHolder）
 - 创建 adapter 的内部类 ( 继承 RecyclerView.Adapter&lt;ViewHolder&gt; )
-
-1.  onCreateViewHolder() --需要使用列表布局
+</code></pre></blockquote>
+<pre><code>1.  onCreateViewHolder() --需要使用列表布局
 2. onBindViewHolder()
 3. getItemCount()
 
