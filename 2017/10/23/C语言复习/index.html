@@ -98,7 +98,7 @@
 <meta property="og:description" content="概念 C是强大而简洁的编程语言。  编程机制 C编译器和链接器是把C语言源代码转换成可执行代码的程序。上图可知我们将源代码输入到编译器，生成机器语言的目标代码通过连接器把目标代码和库代码、启动代码结合生成可执行代码。启动代码在不同的系统下略有不同。 C 语言的语法大概举一些例子  每个程序必须包含一个 main() 函数 声明语句 分号结尾 函数体是花括号 stdio.h 是输入输出的函数在声明语">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006rAlqhly1fksab59717j30jb0ij76a.jpg">
-<meta property="og:updated_time" content="2017-10-23T09:15:44.154Z">
+<meta property="og:updated_time" content="2017-10-23T09:22:43.763Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言复习">
 <meta name="twitter:description" content="概念 C是强大而简洁的编程语言。  编程机制 C编译器和链接器是把C语言源代码转换成可执行代码的程序。上图可知我们将源代码输入到编译器，生成机器语言的目标代码通过连接器把目标代码和库代码、启动代码结合生成可执行代码。启动代码在不同的系统下略有不同。 C 语言的语法大概举一些例子  每个程序必须包含一个 main() 函数 声明语句 分号结尾 函数体是花括号 stdio.h 是输入输出的函数在声明语">
@@ -471,6 +471,7 @@
 <li>_Imaginary</li>
 </ol>
 <p>运算符： sizeof() 返回一个变量内容的大小<br>函数：scanf()</p>
+<p>练习 float 相关：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">float</span> weight;<span class="comment">//重量</span></div><div class="line">	<span class="keyword">float</span> value; <span class="comment">//相等的白金价格</span></div><div class="line">	<span class="built_in">printf</span>(<span class="string">"输入白金的重量？"</span>);</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%f"</span>,&amp;weight);</div><div class="line">	value=<span class="number">1700</span> *weight *<span class="number">14.5833</span>;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"你的白金价值：%.2f"</span>,value);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
