@@ -102,7 +102,9 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fksie08g4mj30g706st96.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fksintz3b3j30gc06b3yy.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fksizpt90jj30l509lwf9.jpg">
-<meta property="og:updated_time" content="2017-10-23T14:02:18.986Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkt4xwvwtkj30bm055jrc.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkt5qc4i39j30ao03hmx3.jpg">
+<meta property="og:updated_time" content="2017-10-24T03:08:31.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言复习">
 <meta name="twitter:description" content="概念 C是强大而简洁的编程语言。  编程机制 C编译器和链接器是把C语言源代码转换成可执行代码的程序。上图可知我们将源代码输入到编译器，生成机器语言的目标代码通过连接器把目标代码和库代码、启动代码结合生成可执行代码。启动代码在不同的系统下略有不同。 C语言的语法大概举一些例子  每个程序必须包含一个 main() 函数 声明语句 分号结尾 函数体是花括号 stdio.h 是输入输出的函数在声明语句">
@@ -505,10 +507,26 @@
 <li>函数获取</li>
 <li>初始化赋值 -_-|| 其实就是初始化变量同时赋值</li>
 </ol>
+<hr>
 <p>变量创建和存储空间</p>
 <p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fksizpt90jj30l509lwf9.jpg" alt=""></p>
-<hr>
-<p>明天继续 (<em>^▽^</em>) 好久不写博客，感觉这段时间啥都没学 -_-||</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> ten = <span class="number">10</span>;</div><div class="line">	<span class="keyword">int</span> two = <span class="number">2</span>;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d minus %d = %d \n"</span>,ten,two,ten - two);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d minus %d is %d \n"</span>,ten);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkt4xwvwtkj30bm055jrc.jpg" alt=""></p>
+<blockquote>
+<p>由于没有给后面两个参数赋值，所以打印出的值是内存的任意数</p>
+</blockquote>
+<p><strong>八进制与十六进制</strong></p>
+<blockquote>
+<p>通常 C语言都假定整型常量是十进制数。程序员喜欢八进制和十六进制，因为他们是 2 的幂，而 10 不是。例如：十进制 65536 经常出现在 16 位机中，用十六进制表示 10000 。十六进制数的每一位都是 4 位二进制数表示。例如， 十六进制 3 是 0011 ，5是 0101 。十六进制数 35 组合 00110101. 这种方式使得二进制与十六进制转换非常方便。 0X前缀表示 十六进制 而八进制的前缀为 0</p>
+</blockquote>
+<p><strong>显示八进制和十六进制</strong></p>
+<ol>
+<li>显示十进制的数字 %d   </li>
+<li>显示八进制的数字 %o   显示前缀 %#o</li>
+<li>显示十六进制的数字 %x 显示前缀 %#x</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> x = <span class="number">100</span>;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"dec = %d; octal = %o;hex = %x \n;"</span> , x , x , x);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"dec = %d; octal = %#o;hex = %#x \n"</span> , x , x , x);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkt5qc4i39j30ao03hmx3.jpg" alt=""></p>
 
       
     </div>
