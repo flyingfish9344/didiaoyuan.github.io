@@ -71,6 +71,8 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="算法," />
+
 
 
 
@@ -87,14 +89,21 @@
 
 
 
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="仙人掌的博客">
-<meta property="og:url" content="http://blog.didiaoyuan.com/tags/UI/index.html">
+<meta name="description" content="冒泡排序 针对前一节讲的 “桶排序” 的问题，当我们处理很大的数据，如：0~200000000，这种范围的数据，需要申请一个 200000000 的变量：这种非常浪费空间！，如果要进行小数的排序，显然这种”桶排序” 是无法解决这些问题的，接下来介绍冒泡排序  基本思想：每次比较两个相邻的元素,如果他们的顺序不对(就是不符合这样排序的)就把他们交换过来。 “冒泡排序” 原理是:每一趟只能确定将一个数">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简单算法(二)">
+<meta property="og:url" content="http://blog.didiaoyuan.com/2017/10/25/简单算法-二/index.html">
 <meta property="og:site_name" content="仙人掌的博客">
+<meta property="og:description" content="冒泡排序 针对前一节讲的 “桶排序” 的问题，当我们处理很大的数据，如：0~200000000，这种范围的数据，需要申请一个 200000000 的变量：这种非常浪费空间！，如果要进行小数的排序，显然这种”桶排序” 是无法解决这些问题的，接下来介绍冒泡排序  基本思想：每次比较两个相邻的元素,如果他们的顺序不对(就是不符合这样排序的)就把他们交换过来。 “冒泡排序” 原理是:每一趟只能确定将一个数">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkulvdlm3cj30b505tt8q.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkulugrwduj30cm08kwen.jpg">
+<meta property="og:updated_time" content="2017-10-25T09:11:04.928Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="仙人掌的博客">
+<meta name="twitter:title" content="简单算法(二)">
+<meta name="twitter:description" content="冒泡排序 针对前一节讲的 “桶排序” 的问题，当我们处理很大的数据，如：0~200000000，这种范围的数据，需要申请一个 200000000 的变量：这种非常浪费空间！，如果要进行小数的排序，显然这种”桶排序” 是无法解决这些问题的，接下来介绍冒泡排序  基本思想：每次比较两个相邻的元素,如果他们的顺序不对(就是不符合这样排序的)就把他们交换过来。 “冒泡排序” 原理是:每一趟只能确定将一个数">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkulvdlm3cj30b505tt8q.jpg">
 
 
 
@@ -122,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.didiaoyuan.com/tags/UI/"/>
+  <link rel="canonical" href="http://blog.didiaoyuan.com/2017/10/25/简单算法-二/"/>
 
 
 
 
 
-  <title> 标签: UI | 仙人掌的博客 </title>
+  <title> 简单算法(二) | 仙人掌的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -163,7 +172,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -309,46 +318,228 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        UI
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://blog.didiaoyuan.com/2017/10/25/简单算法-二/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="didiaoyuan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="仙人掌的博客">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                简单算法(二)
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-25T10:43:29+08:00">
+                2017-10-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/10/25/简单算法-二/" class="leancloud_visitors" data-flag-title="简单算法(二)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><blockquote>
+<p>针对前一节讲的 “桶排序” 的问题，当我们处理很大的数据，如：0~200000000，这种范围的数据，需要申请一个 200000000 的变量：这种非常浪费空间！，如果要进行小数的排序，显然这种”桶排序” 是无法解决这些问题的，接下来介绍冒泡排序</p>
+</blockquote>
+<p>基本思想：每次比较两个相邻的元素,如果他们的顺序不对(就是不符合这样排序的)就把他们交换过来。</p>
+<p>“冒泡排序” 原理是:每一趟只能确定将一个数归位。如果有 n 个数进行排序，就需要进行 n-1 趟.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="comment">//定义输入的个数最多有多少个</span></div><div class="line">	<span class="keyword">int</span> a[<span class="number">100</span>],i,j,t,n;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"请输入你想排序的个数:"</span>);</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="comment">//循环 n 个数到数组中</span></div><div class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//n个数的排序，只进行 n-1 次</span></div><div class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)</div><div class="line">	&#123;	<span class="comment">//这个 for 循环进行比较的次数 比如： 三个数 第一趟： 比较 3-1次 第二趟：3-2</span></div><div class="line">		<span class="comment">// j表示的是数的位置</span></div><div class="line">		<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n-i;j++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(a[j]&lt;a[j+<span class="number">1</span>])</div><div class="line">			&#123;</div><div class="line">				t=a[j];</div><div class="line">				a[j]=a[j+<span class="number">1</span>];</div><div class="line">				a[j+<span class="number">1</span>]=t;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//输出结果</span></div><div class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,a[i]);</div><div class="line">	&#125;</div><div class="line">	getchar();</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkulvdlm3cj30b505tt8q.jpg" alt=""></p>
+<p>如何实现带有姓名和分数的排序？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></div><div class="line"><span class="class">&#123;</span></div><div class="line">	<span class="keyword">char</span> name[<span class="number">21</span>];</div><div class="line">	<span class="keyword">char</span> score;</div><div class="line">&#125;; <span class="comment">//创建结构体储存姓名和分数</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">a</span>[100],<span class="title">t</span>;</span></div><div class="line">	<span class="keyword">int</span> i, j , n;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"请输入要排序的数目: \n"</span>);</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="comment">//循环读入姓名和分数</span></div><div class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%s %d"</span>,a[i].name,&amp;a[i].score);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//循环遍历的趟数</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n-i;j++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(a[j].score&lt;a[j+<span class="number">1</span>].score)</div><div class="line">			&#123;</div><div class="line">				t=a[j];</div><div class="line">				a[j]=a[j+<span class="number">1</span>];</div><div class="line">				a[j+<span class="number">1</span>]=t;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//输出排序后的名字</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%s \n"</span>,a[i].name);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkulugrwduj30cm08kwen.jpg" alt=""></p>
+<blockquote>
+<p>冒泡排序的核心部分是双重嵌套循环。时间复杂度 O(N2) 下一节 –快速排序</p>
+</blockquote>
 
-      <h2 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/04/03/浅谈-Fragment/" itemprop="url">
-              
-                <span itemprop="name">浅谈 Fragment</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h2>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>(*^▽^*)</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="didiaoyuan WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="didiaoyuan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-03T16:34:34+08:00"
-              content="2017-04-03" >
-          04-03
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/24/解析-Intent/" rel="next" title="解析 Intent">
+                <i class="fa fa-chevron-left"></i> 解析 Intent
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
           
           </div>
@@ -356,6 +547,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTExMy83NjYy"></div>
+    
+  </div>
+
 
         </div>
         
@@ -375,8 +572,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/me.jpg"
@@ -467,6 +673,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -584,6 +806,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

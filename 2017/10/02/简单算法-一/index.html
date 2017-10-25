@@ -97,12 +97,12 @@
 <meta property="og:site_name" content="仙人掌的博客">
 <meta property="og:description" content="从极客学院 wiki 中下载的电子书《坐在马桶上学算法》,虽然入门编程已经两年了，但从来没有学习有关算法的知识，因为以后励志想要成为一名合格的程序员，知道算法在编程中是不可或缺的，但现在太正式的学习又会让自己失去信心，所以网上找到这本书，算是培养一下自己的兴趣吧，这本书特点是图文并茂，风趣易懂。(要求:C语言基础) 我用的编译器：Pelles C">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fktnx31i05j309b0613ye.jpg">
-<meta property="og:updated_time" content="2017-10-24T13:56:44.934Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkuah24mr1j307n04za9x.jpg">
+<meta property="og:updated_time" content="2017-10-25T02:42:11.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单算法(一)">
 <meta name="twitter:description" content="从极客学院 wiki 中下载的电子书《坐在马桶上学算法》,虽然入门编程已经两年了，但从来没有学习有关算法的知识，因为以后励志想要成为一名合格的程序员，知道算法在编程中是不可或缺的，但现在太正式的学习又会让自己失去信心，所以网上找到这本书，算是培养一下自己的兴趣吧，这本书特点是图文并茂，风趣易懂。(要求:C语言基础) 我用的编译器：Pelles C">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fktnx31i05j309b0613ye.jpg">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkuah24mr1j307n04za9x.jpg">
 
 
 
@@ -453,8 +453,14 @@
 <li>输出:遍历数组，依次打印，数值&gt;0 的数组多少就打印几次</li>
 </ol>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> a[<span class="number">11</span>],i,j,t;</div><div class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=<span class="number">10</span>;i++)</div><div class="line">		a[i]=<span class="number">0</span>;<span class="comment">//初始化为0</span></div><div class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">5</span>;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</div><div class="line">		a[t]++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=<span class="number">10</span>;i++)</div><div class="line">		<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=a[i];j++)</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d"</span>,i);</div><div class="line">	getchar();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fktnx31i05j309b0613ye.jpg" alt=""></p>
-<p>这种排序方法我们暂且叫”桶排序”,这个程序好比 11 个桶,编号从 0~10 每出现一个数,就将对应编号的桶加1，然后按顺序将通的编号打印出来，打印的次数为桶中的个数</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkuah24mr1j307n04za9x.jpg" alt=""></p>
+<p>这种排序方法我们暂且叫”桶排序”,这个不是正真的桶排序,这个程序好比 11 个桶,编号从 0~10 每出现一个数,就将对应编号的桶加1，然后按顺序将通的编号打印出来，打印的次数为桶中的个数</p>
+<p>上面的只接受 10 以内的排序，如果需要更大范围排序，需要修改数组的大小。如何实现从大到小排序？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 只需要将数组从大到小遍历就可以了</span></div><div class="line"><span class="keyword">for</span>(i=<span class="number">10</span>;i&gt;=<span class="number">0</span>;i--)</div><div class="line">	<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=a[i];j++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,i);</div></pre></td></tr></table></figure>
+<p>时间复杂度: O(m+n+m+n)<br>m:桶的数量<br>n:输入的次数</p>
+<blockquote>
+<p> 如果每个数据对应一个名字 这种简单算法就无法进行,这就要用到冒泡排序</p>
+</blockquote>
 
       
     </div>
@@ -604,7 +610,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
