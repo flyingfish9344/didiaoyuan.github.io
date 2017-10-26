@@ -1814,7 +1814,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f18c69;
+  background: #17abe4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2991,12 +2991,14 @@ pre .javascript .function {
 }
 图片外部的容器方框,
 .out-img-topic {
-  display: block;
-  max-height: 300px;
+  dispaly: block;
+  max-height: 100%;
+  margin-top: 24px;
   margin-bottom: 24px;
   overflow: hidden;
 }
 img.img-topic {
+  width: 100%;
   display: block;
   margin-left: 0.7em;
   margin-right: 0.7em;
