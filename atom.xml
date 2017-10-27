@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.didiaoyuan.com/"/>
-  <updated>2017-10-27T04:30:11.811Z</updated>
+  <updated>2017-10-27T08:47:37.999Z</updated>
   <id>http://blog.didiaoyuan.com/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简单算法(三)</title>
+    <link href="http://blog.didiaoyuan.com/2017/10/27/%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95-%E4%B8%89/"/>
+    <id>http://blog.didiaoyuan.com/2017/10/27/简单算法-三/</id>
+    <published>2017-10-27T07:08:10.000Z</published>
+    <updated>2017-10-27T08:47:37.999Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="算法" scheme="http://blog.didiaoyuan.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://blog.didiaoyuan.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 网络连接</title>
+    <link href="http://blog.didiaoyuan.com/2017/10/27/Android-%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5/"/>
+    <id>http://blog.didiaoyuan.com/2017/10/27/Android-网络连接/</id>
+    <published>2017-10-27T06:59:44.000Z</published>
+    <updated>2017-10-27T07:07:40.959Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基本网络连接"><a href="#基本网络连接" class="headerlink" title="基本网络连接"></a>基本网络连接</h1><p><a href="https://github.com/LowApe/PhotoGallery" target="_blank" rel="external">GitHub 地址</a></p><ol><li>创建一个类，并实现两个方法分别用来获取数据的字节流并把字节流转化为字符串</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FlickerFerchr</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">byte</span>[] getUrlBytes(String urlSpec) <span class="keyword">throws</span> IOException &#123;</div><div class="line"><span class="comment">//        创建 URL 对象将 url 字符串转换为URL</span></div><div class="line">        URL url = <span class="keyword">new</span> URL(urlSpec);</div><div class="line">        <span class="comment">//        创建连接</span></div><div class="line">        HttpURLConnection connection = (HttpURLConnection) url.openConnection();</div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line"></div><div class="line"><span class="comment">//        实例化字节流</span></div><div class="line">            ByteArrayOutputStream out = <span class="keyword">new</span> ByteArrayOutputStream();</div><div class="line"><span class="comment">//        getInputStream() 连接</span></div><div class="line">            InputStream in = connection.getInputStream();</div><div class="line"><span class="comment">//        判断是否连接成功</span></div><div class="line">            <span class="keyword">if</span> (connection.getResponseCode()!=HttpURLConnection.HTTP_OK)&#123;</div><div class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> IOException(connection.getResponseMessage()+<span class="string">"with:"</span>+urlSpec);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">int</span> bytesRead=<span class="number">0</span>;</div><div class="line">            <span class="keyword">byte</span>[] buffer=<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</div><div class="line"><span class="comment">//        循环读取,读取一定数量字节放入缓存区数组buffer，并以整数形式返回实际读取的字节数</span></div><div class="line">            <span class="keyword">while</span> ((bytesRead=in.read(buffer))&gt;<span class="number">0</span>)&#123;</div><div class="line">                out.write(buffer,<span class="number">0</span>,bytesRead);</div><div class="line">            &#125;</div><div class="line"><span class="comment">//        关闭输出流</span></div><div class="line">            out.close();</div><div class="line">            <span class="keyword">return</span> out.toByteArray();</div><div class="line">        &#125;<span class="keyword">finally</span> &#123;</div><div class="line">            connection.disconnect();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getUrlString</span><span class="params">(String urlSpec)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> String(getUrlBytes(urlSpec));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><strong>获取网络使用权限</strong></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.INTERNET"</span>/&gt;</span></div></pre></td></tr></table></figure><hr><p>有点困了(￣o￣) . z Z</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;基本网络连接&quot;&gt;&lt;a href=&quot;#基本网络连接&quot; class=&quot;headerlink&quot; title=&quot;基本网络连接&quot;&gt;&lt;/a&gt;基本网络连接&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/LowApe/PhotoGallery&quot; targe
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://blog.didiaoyuan.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://blog.didiaoyuan.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>深入学习: 进程与任务</title>

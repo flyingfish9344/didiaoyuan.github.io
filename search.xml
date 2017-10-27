@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[简单算法(三)]]></title>
+    <url>%2F2017%2F10%2F27%2F%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95-%E4%B8%89%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Android 网络连接]]></title>
+    <url>%2F2017%2F10%2F27%2FAndroid-%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%2F</url>
+    <content type="text"><![CDATA[基本网络连接GitHub 地址 创建一个类，并实现两个方法分别用来获取数据的字节流并把字节流转化为字符串 1234567891011121314151617181920212223242526272829303132333435public class FlickerFerchr &#123; public byte[] getUrlBytes(String urlSpec) throws IOException &#123;// 创建 URL 对象将 url 字符串转换为URL URL url = new URL(urlSpec); // 创建连接 HttpURLConnection connection = (HttpURLConnection) url.openConnection(); try&#123;// 实例化字节流 ByteArrayOutputStream out = new ByteArrayOutputStream();// getInputStream() 连接 InputStream in = connection.getInputStream();// 判断是否连接成功 if (connection.getResponseCode()!=HttpURLConnection.HTTP_OK)&#123; throw new IOException(connection.getResponseMessage()+"with:"+urlSpec); &#125; int bytesRead=0; byte[] buffer=new byte[1024];// 循环读取,读取一定数量字节放入缓存区数组buffer，并以整数形式返回实际读取的字节数 while ((bytesRead=in.read(buffer))&gt;0)&#123; out.write(buffer,0,bytesRead); &#125;// 关闭输出流 out.close(); return out.toByteArray(); &#125;finally &#123; connection.disconnect(); &#125; &#125; public String getUrlString(String urlSpec) throws IOException &#123; return new String(getUrlBytes(urlSpec)); &#125;&#125; 获取网络使用权限 1&lt;uses-permission android:name="android.permission.INTERNET"/&gt; 有点困了(￣o￣) . z Z]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[深入学习: 进程与任务]]></title>
     <url>%2F2017%2F10%2F27%2F%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0-%E8%BF%9B%E7%A8%8B%E4%B8%8E%E4%BB%BB%E5%8A%A1%2F</url>
     <content type="text"><![CDATA[进程与任务 对象 需要内存和虚拟机的支持才能存在 进程 是操作系统创建的、供应用对象生存以及应用运行的地方 进程 通常占用系统的资源，如内存、网络接口、打开的文件·进程拥有至少一个(可能多个)执行线程。 在 Android 系统中, 进程 总会有一个运行的虚拟机 Android 世界里的每个应用组件都仅与一个进程相关联。应用伴随着自己的进程一并创建,该进程同时也是应用中所以组件的默认进程 每个 activity 实例都仅存在于一个进程和一个任务中。 任务只包含 activity,这些 activity 通常来自于不同的应用 而 进程 则包含应用的全部代码和对象 进程与任务的区别实例1: 当启动一个应用的同时会创建与之对应的进程 当应用中设置了跳转到其他应用的操作，比如联系人 activity 会被添加到这个应用的任务中,然而它也创建了一个联系人应用的进程，当用户后退在不同 activity 间切换过程中，可能不会意识到他们正在进程间的切换 实例2: 情况android 的所有应用，然后启动这个应用，重复启动联系人应用，然后按主屏幕键回到主屏幕点击联系人应用，并添加联系人实例，关系如下图 通过这两个实例可以看出 任务可以说是进程的分支，进程的概念比任务要大，通常任务管理器结束的任务，其实是关于这个应用的进程 下面是别人写的我认为说的很好，可能没有学过操作系统，关于这方面的知识比较欠缺，理解能力也有限，以后会学习这方面的知识 相关链接]]></content>
