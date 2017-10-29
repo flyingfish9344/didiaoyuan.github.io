@@ -98,7 +98,9 @@
 <meta property="og:description" content="基本网络连接GitHub 地址:关于联网显示图片的应用 前期准备  fragment + recyclerView 实现基本框架，这就不说了，前面有介绍过，没总结过 http 与后台的知识  设置网络类  创建一个类，并实现两个方法分别用来获取数据的字节流并把字节流转化为字符串  12345678910111213141516171819202122232425262728293031323334">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkx5w6nlmdj31cf07cdgw.jpg">
-<meta property="og:updated_time" content="2017-10-28T15:37:34.508Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkzgiddxn3j30wo0k2h0k.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkzg5rn77oj31cz0490tk.jpg">
+<meta property="og:updated_time" content="2017-10-29T13:59:07.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 网络连接">
 <meta name="twitter:description" content="基本网络连接GitHub 地址:关于联网显示图片的应用 前期准备  fragment + recyclerView 实现基本框架，这就不说了，前面有介绍过，没总结过 http 与后台的知识  设置网络类  创建一个类，并实现两个方法分别用来获取数据的字节流并把字节流转化为字符串  12345678910111213141516171819202122232425262728293031323334">
@@ -462,6 +464,12 @@
 <h1 id="从-Flickr-获取-JSON-数据"><a href="#从-Flickr-获取-JSON-数据" class="headerlink" title="从 Flickr 获取 JSON 数据"></a>从 Flickr 获取 JSON 数据</h1><blockquote>
 <p>前面的网站虽然通过 web 可以进行访问，但是并没有返回我们可以使用时信息，我们通过 Flickr 提供的 JSON API 获取我们想要的信息，并显示到我们的应用上</p>
 </blockquote>
+<p>下面是我自己建立的，这个过程耗费我两天，因为flickr 创建的 key 一直不生效，最后发现是权限为私有，打开为公有还要上传照片、添加标签、添加 url 最后才能修改</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkzgiddxn3j30wo0k2h0k.jpg" alt=""></p>
+<p>  <a href="https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&amp;api_key=461a0d44890535444f94fd9d9643b6b6&amp;format=json&amp;nojsoncallback=1" target="_blank" rel="external">https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&amp;api_key=461a0d44890535444f94fd9d9643b6b6&amp;format=json&amp;nojsoncallback=1</a></p>
+<p>  <strong>构建 url</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">/*创建一个构造url的方法*/</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fetchItems</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line"><span class="comment">//            构建url 字符串供 getUrlString 方法使用</span></div><div class="line">    String url =Uri.parse(<span class="string">"https://api.flickr.com/services/rest/"</span>)</div><div class="line">    .buildUpon()</div><div class="line">    .appendQueryParameter(<span class="string">"method"</span>,<span class="string">"flickr.photos.getRecent"</span>)</div><div class="line">    .appendQueryParameter(<span class="string">"api_key"</span>,<span class="string">"461a0d44890535444f94fd9d9643b6b6"</span>)</div><div class="line">    .appendQueryParameter(<span class="string">"format"</span>,<span class="string">"json"</span>)</div><div class="line">    .appendQueryParameter(<span class="string">"nojsoncallback"</span>,<span class="string">"1"</span>)</div><div class="line">    .appendQueryParameter(<span class="string">"extras"</span>,<span class="string">"url_s"</span>)</div><div class="line">    .build().toString();</div><div class="line">    String jsonString=getUrlString(url);</div><div class="line">    Log.e(<span class="string">"TAG"</span>,<span class="string">"JSON: "</span>+jsonString);</div><div class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>重新修改后台访问网络连接</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*创建一个 AsyncTask 的内部类，后台处理网络*/</span></div><div class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">FetchItemsTask</span> <span class="keyword">extends</span> <span class="title">AsyncTask</span>&lt;<span class="title">Void</span>,<span class="title">Void</span>,<span class="title">Void</span>&gt;</span>&#123;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">protected</span> Void <span class="title">doInBackground</span><span class="params">(Void... voids)</span> </span>&#123;</div><div class="line"><span class="comment">//            获取网络中的String 数据</span></div><div class="line">            <span class="comment">/* String result = new FlickerFerchr()</span></div><div class="line"><span class="comment">                     .getUrlString("http://www.bignerdranch.com");</span></div><div class="line"><span class="comment">//                log 显示 String</span></div><div class="line"><span class="comment">             Log.i("TAG","Fetched contents of URL:+"+result);*/</span></div><div class="line">            <span class="keyword">new</span> FlickerFerchr().fetchItems();</div><div class="line"></div><div class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Console 台显示 json 字符串</strong><br>  <img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkzg5rn77oj31cz0490tk.jpg" alt=""></p>
 
       
     </div>
@@ -611,7 +619,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">56</span>
+                <span class="site-state-item-count">57</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -629,7 +637,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
