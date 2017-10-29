@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Android-处理 JSON数据]]></title>
     <url>%2F2017%2F10%2F29%2FAndroid-%E5%A4%84%E7%90%86-JSON%E6%95%B0%E6%8D%AE%2F</url>
-    <content type="text"><![CDATA[解析 JSON 数据 这是通过使用 google 插件 postman 排好的格式 json.org API 提供有对应 JSON 数据的 Java 对象如 JSONObject 和 JSONArray。 使用 JSONObject(String) 构造函数，可以把 JSON 数据解析进相应的 Java 对象。 1JSONObject jsonObject=new JSONObject(jsonString); 当将 json 字符串传入 JSONObject 对象后,会生成与原始 JSON 数据对应的对象树,如上图。 获取对应图片的信息并创建模型类创建 GalleryItems ,并在网络类创建一个方法获取每张图片信息，需要获取的信息为模型类的字段 id title url_s]]></content>
+    <content type="text"><![CDATA[解析 JSON 数据 这是通过使用 google 插件 postman 排好的格式 json.org API 提供有对应 JSON 数据的 Java 对象如 JSONObject 和 JSONArray。 使用 JSONObject(String) 构造函数，可以把 JSON 数据解析进相应的 Java 对象。 1JSONObject jsonObject=new JSONObject(jsonString); 当将 json 字符串传入 JSONObject 对象后,会生成与原始 JSON 数据对应的对象树,如上图。 获取对应图片的信息并创建模型类创建 GalleryItems ,并在网络类创建一个方法获取每张图片信息，需要获取的信息为模型类的字段 id title url_s 暂时导致 ε=(´ο｀*)))唉]]></content>
       <categories>
         <category>Android</category>
       </categories>
