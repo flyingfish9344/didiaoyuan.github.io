@@ -92,15 +92,16 @@
 <meta name="description" content="解析 JSON 数据 这是通过使用 google 插件 postman 排好的格式  json.org API 提供有对应 JSON 数据的 Java 对象如 JSONObject 和 JSONArray。 使用 JSONObject(String) 构造函数，可以把 JSON 数据解析进相应的 Java 对象。  1JSONObject jsonObject=new JSONObject(jso">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android-处理 JSON数据">
+<meta property="og:title" content="Android-处理 JSON数据(PhotoGallery应用)">
 <meta property="og:url" content="http://blog.didiaoyuan.com/2017/10/29/Android-处理-JSON数据/index.html">
 <meta property="og:site_name" content="仙人掌的博客">
 <meta property="og:description" content="解析 JSON 数据 这是通过使用 google 插件 postman 排好的格式  json.org API 提供有对应 JSON 数据的 Java 对象如 JSONObject 和 JSONArray。 使用 JSONObject(String) 构造函数，可以把 JSON 数据解析进相应的 Java 对象。  1JSONObject jsonObject=new JSONObject(jso">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkzgwvu6zzj30lp0egmy4.jpg">
-<meta property="og:updated_time" content="2017-10-29T14:21:59.381Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fl024mq7k5j30aa0g8q4q.jpg">
+<meta property="og:updated_time" content="2017-10-30T02:41:17.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android-处理 JSON数据">
+<meta name="twitter:title" content="Android-处理 JSON数据(PhotoGallery应用)">
 <meta name="twitter:description" content="解析 JSON 数据 这是通过使用 google 插件 postman 排好的格式  json.org API 提供有对应 JSON 数据的 Java 对象如 JSONObject 和 JSONArray。 使用 JSONObject(String) 构造函数，可以把 JSON 数据解析进相应的 Java 对象。  1JSONObject jsonObject=new JSONObject(jso">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkzgwvu6zzj30lp0egmy4.jpg">
 
@@ -136,7 +137,7 @@
 
 
 
-  <title> Android-处理 JSON数据 | 仙人掌的博客 </title>
+  <title> Android-处理 JSON数据(PhotoGallery应用) | 仙人掌的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -348,7 +349,7 @@
             
             
               
-                Android-处理 JSON数据
+                Android-处理 JSON数据(PhotoGallery应用)
               
             
           </h2>
@@ -403,7 +404,7 @@
 
           
           
-             <span id="/2017/10/29/Android-处理-JSON数据/" class="leancloud_visitors" data-flag-title="Android-处理 JSON数据">
+             <span id="/2017/10/29/Android-处理-JSON数据/" class="leancloud_visitors" data-flag-title="Android-处理 JSON数据(PhotoGallery应用)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -451,8 +452,29 @@
 <li>title</li>
 <li>url_s</li>
 </ol>
-<hr>
-<p>暂时导致 ε=(´ο｀*)))唉</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*创建 parseItems() 获取 json字符串中我们想获得的并添加给 模型层*/</span></div><div class="line">   <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">parseItems</span><span class="params">(List&lt;GalleryItem&gt; items, JSONObject jsonObject)</span> <span class="keyword">throws</span> JSONException </span>&#123;</div><div class="line"><span class="comment">//        获取 JSONObject</span></div><div class="line">       JSONObject jsonObject1 = jsonObject.getJSONObject(<span class="string">"photos"</span>);</div><div class="line"><span class="comment">//        获取对象里面的数组</span></div><div class="line">       JSONArray jsonArray = jsonObject1.getJSONArray(<span class="string">"photo"</span>);</div><div class="line"></div><div class="line"><span class="comment">//        循环遍历找出每一个对应的标题和id</span></div><div class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= jsonArray.length(); i++) &#123;</div><div class="line"><span class="comment">//            获取每一个 JSONObject 对象</span></div><div class="line">           JSONObject eachJSONObject=jsonArray.getJSONObject(i);</div><div class="line"><span class="comment">//            创建一个模型层的类，用于添加信息</span></div><div class="line">           GalleryItem item= <span class="keyword">new</span> GalleryItem();</div><div class="line">           item.setId(eachJSONObject.getString(<span class="string">"id"</span>));</div><div class="line">           item.setCaption(eachJSONObject.getString(<span class="string">"title"</span>));</div><div class="line"><span class="comment">//            检查 是否有 url_s 的键</span></div><div class="line">           <span class="keyword">if</span>(!eachJSONObject.has(<span class="string">"url_s"</span>))&#123;</div><div class="line">               <span class="keyword">continue</span>;</div><div class="line">           &#125;</div><div class="line">           item.setUrl(eachJSONObject.getString(<span class="string">"url_s"</span>));</div><div class="line">           items.add(item);</div><div class="line">       &#125;</div><div class="line"></div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>创建 ViewHolder 和 Adapter 内部类 实现 RecyclerView 的视图以及数据加载(代码部分省略)</p>
+<h1 id="从-AsyncTask-回到主线程"><a href="#从-AsyncTask-回到主线程" class="headerlink" title="从 AsyncTask 回到主线程"></a>从 AsyncTask 回到主线程</h1><blockquote>
+<p>我们需要注意的是在后台我们获取了数据，需要把数据适配到前台中，不能再后台线程中调用设置适配器。在计算机里，内存对象间步调不一致冲突会让应用崩溃，所以不允许从后台更新 UI 线程</p>
+</blockquote>
+<p><a href="http://blog.didiaoyuan.com/2017/05/07/AsyncTask-%E5%92%8C-AsyncTaskLoader-%E7%9A%84%E4%BD%BF%E7%94%A8/">回顾AsyncTask</a></p>
+<p>使用 onPostExecute(Result)<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*创建一个 AsyncTask 的内部类，后台处理网络*/</span></div><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">FetchItemsTask</span> <span class="keyword">extends</span> <span class="title">AsyncTask</span>&lt;<span class="title">Void</span>, <span class="title">Void</span>, <span class="title">List</span>&lt;<span class="title">GalleryItem</span>&gt;&gt; </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> List&lt;GalleryItem&gt; <span class="title">doInBackground</span><span class="params">(Void... voids)</span> </span>&#123;</div><div class="line"></div><div class="line"><span class="comment">//            获取网络中的String 数据</span></div><div class="line">        <span class="comment">/* String result = new FlickerFerchr()</span></div><div class="line"><span class="comment">                 .getUrlString("http://www.bignerdranch.com");</span></div><div class="line"><span class="comment">//                log 显示 String</span></div><div class="line"><span class="comment">         Log.i("TAG","Fetched contents of URL:+"+result);*/</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> FlickerFerchr().fetchItems();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPostExecute</span><span class="params">(List&lt;GalleryItem&gt; items)</span> </span>&#123;</div><div class="line">        mItems = items;</div><div class="line">        setupAdapter();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1fl024mq7k5j30aa0g8q4q.jpg" alt=""></p>
+<h1 id="清理-AsyncTask"><a href="#清理-AsyncTask" class="headerlink" title="清理 AsyncTask"></a>清理 AsyncTask</h1><blockquote>
+<p>一开始我们保留了 fragment(调用了 setRetainInstance(true) )，这样即使设备旋转，也不会重复创建新的 AsyncTask 去获取 JSON 数据。但是有些时候必须掌控它，让他能够随时撤销或重新运行 AsyncTask</p>
+</blockquote>
+<p><strong>AsyncTask.cancel(boolean)撤销</strong></p>
+<ol>
+<li>温和的(false)</li>
+<li>粗暴的(true)</li>
+</ol>
+<p>第一种，传入参数为 false ,它可能温和的设置 isCancel() 的状态，然后提前结束运行</p>
+<p>第二种,传入参数为 true ,它会粗暴地终止 doInBackground() 方法当前所在的线程，应尽量避免使用这种方式</p>
+<p><strong>什么时候使用撤销?</strong><br>当 fragment 和 activity 已经销毁了或者看不到了，就在 onStop() 方法里(看不到视图)，或者 onDestory()方法里(fragment/activity) 实例已销毁撤销 AsyncTask 实例</p>
+<blockquote>
+<p>fragment 和 activity 已经销毁了 不去销毁 AsyncTask 可能引发内存泄漏,也可能出现 UI 更新问题</p>
+</blockquote>
 
       
     </div>
@@ -519,6 +541,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/30/Android-Gson学习/" rel="prev" title="Android-Gson学习">
+                Android-Gson学习 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -598,7 +624,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-count">58</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -684,7 +710,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解析-JSON-数据"><span class="nav-number">1.</span> <span class="nav-text">解析 JSON 数据</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解析-JSON-数据"><span class="nav-number">1.</span> <span class="nav-text">解析 JSON 数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从-AsyncTask-回到主线程"><span class="nav-number">2.</span> <span class="nav-text">从 AsyncTask 回到主线程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#清理-AsyncTask"><span class="nav-number">3.</span> <span class="nav-text">清理 AsyncTask</span></a></li></ol></div>
             
 
           </div>

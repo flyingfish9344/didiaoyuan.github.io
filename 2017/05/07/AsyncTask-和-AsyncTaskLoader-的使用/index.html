@@ -101,7 +101,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2556431-b57e3a20b2b4fc93.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/200">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2556431-ed038291380333b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/640">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2556431-1554d2827be13e59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300">
-<meta property="og:updated_time" content="2017-10-24T10:38:44.761Z">
+<meta property="og:updated_time" content="2017-10-30T02:45:25.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" AsyncTask 和 AsyncTaskLoader 的使用">
 <meta name="twitter:description" content="上一篇 JSON学习 中介绍了 JSON 对象的结构，如何解析 JSON 数据，但是我们的 JSON 数据是本地已经转换的 String 类型，现在我们处理网上的 JSON 数据,用到了网上的操作，必然要进行网络的连接，讲到网络部分，有必然使用到多线程，所以本篇侧重于介绍多线程部分。">
@@ -460,7 +460,7 @@
 </li>
 <li><p><strong>doInBackground(Params…)：</strong><br><strong>后台线程中调用</strong> ，该方法用于处理耗时操作，操作一旦完成既可以通过 return 来返回执行结果。用过要在该方法中更新 UI 可以手动调用 publishProgres(Progress…) 方法来完成。</p>
 </li>
-<li><p><strong>onProgressUpdate(Progress…)：</strong><br><strong>UI 线程中调用</strong> 利用该方法可以对 UI 进行相应的更新。</p>
+<li><p><strong>onProgressUpdate(Progress…)：</strong><br><strong>UI 线程中调用</strong> 利用该方法可以对 UI 进行相应的更新。该方法的使用必须在 doInBackground() 方法使用 publishProgres() 方法</p>
 </li>
 <li><p><strong>onPostExcute(Result)：</strong><br><strong>UI 线程中调用</strong>  在doInBackground(Params…)中返回的数据会作为参数传递到该方法中。 可以利用后台线程返回的参数进行 UI 操作。</p>
 </li>
@@ -640,7 +640,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-count">58</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
