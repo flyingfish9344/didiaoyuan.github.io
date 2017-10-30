@@ -99,7 +99,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fkzgwvu6zzj30lp0egmy4.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1fl024mq7k5j30aa0g8q4q.jpg">
-<meta property="og:updated_time" content="2017-10-30T02:41:17.687Z">
+<meta property="og:updated_time" content="2017-10-30T02:53:27.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android-处理 JSON数据(PhotoGallery应用)">
 <meta name="twitter:description" content="解析 JSON 数据 这是通过使用 google 插件 postman 排好的格式  json.org API 提供有对应 JSON 数据的 Java 对象如 JSONObject 和 JSONArray。 使用 JSONObject(String) 构造函数，可以把 JSON 数据解析进相应的 Java 对象。  1JSONObject jsonObject=new JSONObject(jso">
@@ -471,7 +471,8 @@
 </ol>
 <p>第一种，传入参数为 false ,它可能温和的设置 isCancel() 的状态，然后提前结束运行</p>
 <p>第二种,传入参数为 true ,它会粗暴地终止 doInBackground() 方法当前所在的线程，应尽量避免使用这种方式</p>
-<p><strong>什么时候使用撤销?</strong><br>当 fragment 和 activity 已经销毁了或者看不到了，就在 onStop() 方法里(看不到视图)，或者 onDestory()方法里(fragment/activity) 实例已销毁撤销 AsyncTask 实例</p>
+<p><strong>什么时候使用撤销?</strong></p>
+<p>当 fragment 和 activity 已经销毁了或者看不到了，就在 onStop() 方法里(看不到视图)，或者 onDestory()方法里(fragment/activity) 实例已销毁撤销 AsyncTask 实例</p>
 <blockquote>
 <p>fragment 和 activity 已经销毁了 不去销毁 AsyncTask 可能引发内存泄漏,也可能出现 UI 更新问题</p>
 </blockquote>
