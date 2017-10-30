@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.didiaoyuan.com/"/>
-  <updated>2017-10-30T02:51:26.071Z</updated>
+  <updated>2017-10-30T13:42:54.698Z</updated>
   <id>http://blog.didiaoyuan.com/</id>
   
   <author>
@@ -21,12 +21,23 @@
     <link href="http://blog.didiaoyuan.com/2017/10/30/Android-Gson%E5%AD%A6%E4%B9%A0/"/>
     <id>http://blog.didiaoyuan.com/2017/10/30/Android-Gson学习/</id>
     <published>2017-10-30T02:51:26.000Z</published>
-    <updated>2017-10-30T02:51:26.071Z</updated>
+    <updated>2017-10-30T13:42:54.698Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Gson"><a href="#Gson" class="headerlink" title="Gson"></a>Gson</h1><p>Gson 是 google 推出的工具库(JSON解析库)。不用写任何解析代码，Gson 就能自动把 JSON 数据映射到 Java 对象</p><h1 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h1><p><a href="https://github.com/google/gson/blob/master/UserGuide.md" target="_blank" rel="external">官方用户指南</a></p><h1 id="使用-Gson"><a href="#使用-Gson" class="headerlink" title="使用 Gson"></a>使用 Gson</h1><ol><li>导入依赖<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">    compile <span class="string">'com.google.code.gson:gson:2.8.2'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></li></ol><p>2.</p><hr><p>今天出去…结果就跑了一天….下午回来还有课 ε=(´ο｀*)))唉 困zzzz</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;Gson&quot;&gt;&lt;a href=&quot;#Gson&quot; class=&quot;headerlink&quot; title=&quot;Gson&quot;&gt;&lt;/a&gt;Gson&lt;/h1&gt;&lt;p&gt;Gson 是 google 推出的工具库(JSON解析库)。不用写任何解析代码，Gson 就能自动把 JSON 数据映射到 
+      
+    
     </summary>
     
+      <category term="Android" scheme="http://blog.didiaoyuan.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://blog.didiaoyuan.com/tags/Android/"/>
     
   </entry>
   

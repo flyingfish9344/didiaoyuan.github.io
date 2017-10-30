@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[Android-Gson学习]]></title>
     <url>%2F2017%2F10%2F30%2FAndroid-Gson%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[GsonGson 是 google 推出的工具库(JSON解析库)。不用写任何解析代码，Gson 就能自动把 JSON 数据映射到 Java 对象 官方文档官方用户指南 使用 Gson 导入依赖123dependencies &#123; compile 'com.google.code.gson:gson:2.8.2'&#125; 2. 今天出去…结果就跑了一天….下午回来还有课 ε=(´ο｀*)))唉 困zzzz]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Android-处理 JSON数据(PhotoGallery应用)]]></title>
