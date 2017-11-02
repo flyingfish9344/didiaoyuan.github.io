@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="仙人掌的博客">
 <meta property="og:description" content="GsonGson 是 google 推出的工具库(JSON解析库)。不用写任何解析代码，Gson 就能自动把 JSON 数据映射到 Java 对象 官方文档官方用户指南 使用 Gson官方使用指南  导入依赖 123dependencies &amp;#123;    compile &apos;com.google.code.gson:gson:2.8.2&apos;&amp;#125;  Gson 基本用法   创建 Gson">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-31T03:02:48.218Z">
+<meta property="og:updated_time" content="2017-10-31T07:21:39.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android-Gson学习">
 <meta name="twitter:description" content="GsonGson 是 google 推出的工具库(JSON解析库)。不用写任何解析代码，Gson 就能自动把 JSON 数据映射到 Java 对象 官方文档官方用户指南 使用 Gson官方使用指南  导入依赖 123dependencies &amp;#123;    compile &apos;com.google.code.gson:gson:2.8.2&apos;&amp;#125;  Gson 基本用法   创建 Gson">
@@ -456,7 +456,6 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Gson gson = <span class="keyword">new</span> Gson();<span class="comment">//创建 Gson 对象</span></div><div class="line">Collection&lt;Integer&gt; ints = Lists.immutableList(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>); <span class="comment">//创建一个int 的集合清单后面表示，创建一个不可变集合</span></div><div class="line"><span class="comment">// Serialization</span></div><div class="line">String json = gson.toJson(ints);  <span class="comment">// ==&gt; json is [1,2,3,4,5]</span></div><div class="line"></div><div class="line"><span class="comment">// Deserialization</span></div><div class="line">Type collectionType = <span class="keyword">new</span> TypeToken&lt;Collection&lt;Integer&gt;&gt;()&#123;&#125;.getType();</div><div class="line">Collection&lt;Integer&gt; ints2 = gson.fromJson(json, collectionType);</div><div class="line"><span class="comment">// ==&gt; ints2 is same as ints</span></div></pre></td></tr></table></figure>
 <p><a href="http://blog.csdn.net/dyllove98/article/details/9246757" target="_blank" rel="external">关于   immutable</a><br><br><a href="http://blog.csdn.net/gtkknd/article/details/50890341" target="_blank" rel="external">关于 TypeToken</a></p>
 <hr>
-<p>暂时到这，下午去 面试。。。</p>
 
       
     </div>
@@ -523,6 +522,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/02/自我反思-17-11-2/" rel="prev" title="自我反思(17-11-2)">
+                自我反思(17-11-2) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -602,7 +605,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-count">59</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

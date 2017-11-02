@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[自我反思(17-11-2)]]></title>
+    <url>%2F2017%2F11%2F02%2F%E8%87%AA%E6%88%91%E5%8F%8D%E6%80%9D-17-11-2%2F</url>
+    <content type="text"><![CDATA[这两个星期，可能因为面试的事情，没有过多的时间去学习，今天可以算告别面试，最近的事情比较多，需要思考这一段时间出现的问题，以及对以后的路进行反思。 技术是王道 不管你的简历排版有多好，在技术面试的时候总是谈的技术，所以技术才是王道，其他的只不过是给你添加加分项，毕竟一个企业招人，还是为了招能做事的人，能为这个企业带来利益的员工，一般学生素质都差不多，唯一不同的就是学习能力的多少。 学历很重要 不管技术有多强，这个社会总是人外有人，天外有天，学历就是把人化成了三流九等，问题不在于我们排斥这样的社会现状，而是对自己能力的一个质疑，如果比别人弱，我们到底弱到那里，为什么会产生这样的差异，一般来说人都是很了解自己的，唯一不同的是不同的人自制力不同，越是自制力强的人，做事越有条理性。专科的自己，如果现在就职了，很可能一旦跳槽就会面临学历太低，年龄太高，对方不想要的情况，我想自己现在还是又能力继续深造，如果现在放弃了，以后可能就没机会了，毕竟社会的有色眼镜太多。 社会情况 通过这次面试，大概了解了目前还是缺 java 工程师，Android 火爆的情况已经成为过去式，java 那么多年技术也走向成熟了，虽然新兴语言也有些不错，可能目前使用还不够普及，以及文档还不够完善。所以目前需要学习 java 相关的一些知识。当然其他的也不能拉下。 对自己说的 不管以后有多难找工作，在校的时候，坚持学习总是没有错的，我们在学习技术同时，也要关注未来的一个趋势，比较我们需要同过自己喜欢的技术养活自己，才能在这条路上走得更远，要想出了社会让别人尊重自己，就需要先让自己变得很强大，接下来的日子里，需要以专升本为主学习，并把比赛的事情好好准备，空闲的时间 看一下 java 和 算法 、数据结构的知识，先打好地基，否则很难有太高的成就。 作息时间安排 这两个星期，没有很好的安排作息时间，很明显感到身体的疲惫，今天上去谈 offer 吐了三次，熬夜还是不要了，以后要想过得很好，还得需要很长的一段路去走，坚持！！！ 总有一天实现梦想！]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Android-Gson学习]]></title>
     <url>%2F2017%2F10%2F30%2FAndroid-Gson%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[GsonGson 是 google 推出的工具库(JSON解析库)。不用写任何解析代码，Gson 就能自动把 JSON 数据映射到 Java 对象 官方文档官方用户指南 使用 Gson官方使用指南 导入依赖 123dependencies &#123; compile 'com.google.code.gson:gson:2.8.2'&#125; Gson 基本用法 创建 Gson 对象1Gson gson=new Gson(); 主要用法 123456789101112131415// Serialization(序列化)Gson gson = new Gson();gson.toJson(1); // ==&gt; 1gson.toJson("abcd"); // ==&gt; "abcd"gson.toJson(new Long(10)); // ==&gt; 10int[] values = &#123; 1 &#125;;gson.toJson(values); // ==&gt; [1]// Deserialization(反序列化)int one = gson.fromJson("1", int.class);Integer one = gson.fromJson("1", Integer.class);Long one = gson.fromJson("1", Long.class);Boolean false = gson.fromJson("false", Boolean.class);String str = gson.fromJson("\"abc\"", String.class);String[] anotherStr = gson.fromJson("[\"abc\"]", String[].class); toJson()：用于将Java对象转换为相应的JSON数据fromJson：用于将JSON数据转换为相应的Java对象 对象用法123456789101112131415161718class BagOfPrimitives &#123; private int value1 = 1; private String value2 = "abc"; private transient int value3 = 3; BagOfPrimitives() &#123; // no-args constructor &#125;&#125;// Serialization(序列化)BagOfPrimitives obj = new BagOfPrimitives();Gson gson = new Gson();String json = gson.toJson(obj); // ==&gt; json is &#123;"value1":1,"value2":"abc"&#125;//Deserialization(反序列化)BagOfPrimitives obj2=gson.fromJson(json,BagOfPrimitives.class); 数组用法1234567891011Gson gson = new Gson();int[] ints = &#123;1, 2, 3, 4, 5&#125;;String[] strings = &#123;"abc", "def", "ghi"&#125;;// Serialization序列化gson.toJson(ints); // ==&gt; [1,2,3,4,5]gson.toJson(strings); // ==&gt; ["abc", "def", "ghi"]// Deserialization反序列化int[] ints2 = gson.fromJson("[1,2,3,4,5]", int[].class);// ==&gt; ints2 will be same as ints json原先是数组对象，反序列化为java数组对象 集合用法 123456789Gson gson = new Gson();//创建 Gson 对象Collection&lt;Integer&gt; ints = Lists.immutableList(1,2,3,4,5); //创建一个int 的集合清单后面表示，创建一个不可变集合// SerializationString json = gson.toJson(ints); // ==&gt; json is [1,2,3,4,5]// DeserializationType collectionType = new TypeToken&lt;Collection&lt;Integer&gt;&gt;()&#123;&#125;.getType();Collection&lt;Integer&gt; ints2 = gson.fromJson(json, collectionType);// ==&gt; ints2 is same as ints 关于 immutable关于 TypeToken 暂时到这，下午去 面试。。。]]></content>
+    <content type="text"><![CDATA[GsonGson 是 google 推出的工具库(JSON解析库)。不用写任何解析代码，Gson 就能自动把 JSON 数据映射到 Java 对象 官方文档官方用户指南 使用 Gson官方使用指南 导入依赖 123dependencies &#123; compile 'com.google.code.gson:gson:2.8.2'&#125; Gson 基本用法 创建 Gson 对象1Gson gson=new Gson(); 主要用法 123456789101112131415// Serialization(序列化)Gson gson = new Gson();gson.toJson(1); // ==&gt; 1gson.toJson("abcd"); // ==&gt; "abcd"gson.toJson(new Long(10)); // ==&gt; 10int[] values = &#123; 1 &#125;;gson.toJson(values); // ==&gt; [1]// Deserialization(反序列化)int one = gson.fromJson("1", int.class);Integer one = gson.fromJson("1", Integer.class);Long one = gson.fromJson("1", Long.class);Boolean false = gson.fromJson("false", Boolean.class);String str = gson.fromJson("\"abc\"", String.class);String[] anotherStr = gson.fromJson("[\"abc\"]", String[].class); toJson()：用于将Java对象转换为相应的JSON数据fromJson：用于将JSON数据转换为相应的Java对象 对象用法123456789101112131415161718class BagOfPrimitives &#123; private int value1 = 1; private String value2 = "abc"; private transient int value3 = 3; BagOfPrimitives() &#123; // no-args constructor &#125;&#125;// Serialization(序列化)BagOfPrimitives obj = new BagOfPrimitives();Gson gson = new Gson();String json = gson.toJson(obj); // ==&gt; json is &#123;"value1":1,"value2":"abc"&#125;//Deserialization(反序列化)BagOfPrimitives obj2=gson.fromJson(json,BagOfPrimitives.class); 数组用法1234567891011Gson gson = new Gson();int[] ints = &#123;1, 2, 3, 4, 5&#125;;String[] strings = &#123;"abc", "def", "ghi"&#125;;// Serialization序列化gson.toJson(ints); // ==&gt; [1,2,3,4,5]gson.toJson(strings); // ==&gt; ["abc", "def", "ghi"]// Deserialization反序列化int[] ints2 = gson.fromJson("[1,2,3,4,5]", int[].class);// ==&gt; ints2 will be same as ints json原先是数组对象，反序列化为java数组对象 集合用法 123456789Gson gson = new Gson();//创建 Gson 对象Collection&lt;Integer&gt; ints = Lists.immutableList(1,2,3,4,5); //创建一个int 的集合清单后面表示，创建一个不可变集合// SerializationString json = gson.toJson(ints); // ==&gt; json is [1,2,3,4,5]// DeserializationType collectionType = new TypeToken&lt;Collection&lt;Integer&gt;&gt;()&#123;&#125;.getType();Collection&lt;Integer&gt; ints2 = gson.fromJson(json, collectionType);// ==&gt; ints2 is same as ints 关于 immutable关于 TypeToken]]></content>
       <categories>
         <category>Android</category>
       </categories>
@@ -375,8 +386,8 @@
       </categories>
       <tags>
         <tag>Git</tag>
-        <tag>分布式</tag>
         <tag>版本控制</tag>
+        <tag>分布式</tag>
       </tags>
   </entry>
   <entry>
