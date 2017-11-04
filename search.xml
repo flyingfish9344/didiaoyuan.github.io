@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C语言复习(三)]]></title>
+    <url>%2F2017%2F11%2F04%2FC%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0-%E4%B8%89%2F</url>
+    <content type="text"><![CDATA[使用字符: char 类型char 类型存储字符(8位存储单元)，从技术层面看，char 是整数类型。ASCII(0~127;只需 8 位的存储单元) 编码 比如：A用整数 65 代表。因此，存储字母 A 实际上存储的是整数 65 字符常量和初始化 如果要把一个字符常量初始化为字母A，不必背下 ASCII 码。用单引号括起来的单个字符被称为字符常量，编译器一发现’A’，就会将其转换成相应的代码值。单引号必不可少1234char abc; //声明char 类型abc='A' //正确abc=A //错误 A 现在是一个变量；abc="A" //错误 A 现在是一个字符串 非打印字符单引号只适用于字符、数字、标点符号 使用 ASCII 转义序列 打印警报12345678#include &lt;stdio.h&gt;int main(void)&#123; char a; a='\a'; printf("%c",a); //打印峰鸣声 return 0;&#125;]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C语言复习(二)]]></title>
     <url>%2F2017%2F11%2F03%2FC%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0-%E4%BA%8C%2F</url>
     <content type="text"><![CDATA[其他整数类型3修饰基本整数类型 short long unsigned short int 或者 short 占用存储空间可能比 int 类型少 long int 或者 long 占用存储空间比 int 多 long long int 或 long long (C99标准加入) 占用的存储空间可能比 long 多。至少占用 64 位。 unsigned int 或 unsigned 只用于非负数的场合。例如 16位 unsigned int 允许取值范围是 0~65535 ，而不是 -32768~32767 。 使用多种整数类型的原因 C语言规定了 short 占用的存储空间不能多于 int long 占用的存储空间不能少于 int 这样的规定是为了适应不同的机器。例如：早期电脑中 int 和 short 类型都占 16 位，long 类型占 32，后来系统都是用 16位存储 short 类型。32位存储 int 类型和 long 类型。现在，计算机普遍为 64 位处理器，为了存储 64 位的整数，才引入了 long long 整型 现在个人计算机最常见的设置是: long long 占 64 位 long 占 32位 short 占 16位 int 占 16位或者 32位(依计算机的自然字长而定) 原则上，这 4 种类型代表 4 种不同的大小，但是实际使用中，有些类型之间通常有重叠 对于 16 位机，short 和 int 的最小取值范围是 [-32767,32767] 对于 32 位机, long 的最小取值范围 [-2147483647,2147483647] unsigned int 和 unsigned short 最小取值范围是[0,65535] unsigned long 最小取值范围 [0,4294967295] 对于 64位 long long 类型比较大，就不说了 long 常量和 long long 常量 当整型存储的数值很大，编译器会一次尝试使用： unsigned int long unsigned long long long unsigned long long 如果要把一个较小的常量当做 long 类型。在值得末尾加上l或L 整数溢出 如果整数超出类型的取值范围会怎么样？ 123456789#include &lt;stdio.h&gt;int main(void)&#123; int i=2147483647; unsigned int j = 4294967295; printf("%d %d %d \n",i,i+1,i+2 ); printf("%u %u %u \n",j,j+1,j+2 ); return 0;&#125; 打印 short、long、long long和 unsigned 打印 unsigned 类型的值，使用 %u 转换说明 打印 long 类型的值，使用 %ld 转换说明 打印 short 类型的值，%hd 表示以十进制显示 short 类型的整数 对于 long long 类型，%lld 和%llu 分别表示有符号和无符号类型 具体代码：123456789101112131415#include &lt;stdio.h&gt;int main(void)&#123; unsigned int un = 3000000000;//int 为 32 位 short 为16 位的系统 short end =200; long big = 65537; long long verybig=12345678909; printf("un = %u and not %d\n",un,un); printf("end = %hd and end %d\n",end,end); printf("big = %ld and big %hd\n",big,big); printf("verybig = %lld and not %ld\n",verybig,verybig); getchar(); return 0;&#125; 在使用 printf() 函数时，切记检查每一个待打印都有对应的转换说明，还要检查转换说明的类型是否与待打印值得类型相匹配]]></content>

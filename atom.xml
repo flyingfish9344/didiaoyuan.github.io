@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.didiaoyuan.com/"/>
-  <updated>2017-11-03T09:23:02.099Z</updated>
+  <updated>2017-11-04T15:33:46.919Z</updated>
   <id>http://blog.didiaoyuan.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C语言复习(三)</title>
+    <link href="http://blog.didiaoyuan.com/2017/11/04/C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0-%E4%B8%89/"/>
+    <id>http://blog.didiaoyuan.com/2017/11/04/C语言复习-三/</id>
+    <published>2017-11-04T13:44:17.000Z</published>
+    <updated>2017-11-04T15:33:46.919Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="使用字符-char-类型"><a href="#使用字符-char-类型" class="headerlink" title="使用字符: char 类型"></a>使用字符: char 类型</h2><p>char 类型存储字符(8位存储单元)，从技术层面看，char 是整数类型。ASCII(0~127;只需 8 位的存储单元) 编码 比如：A用整数 65 代表。因此，存储字母 A 实际上存储的是整数 65</p><p><strong>字符常量和初始化</strong></p><p>如果要把一个字符常量初始化为字母A，不必背下 ASCII 码。用单引号括起来的单个字符被称为字符常量，编译器一发现’A’，就会将其转换成相应的代码值。单引号必不可少<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> abc; <span class="comment">//声明char 类型</span></div><div class="line">abc=<span class="string">'A'</span> <span class="comment">//正确</span></div><div class="line">abc=A <span class="comment">//错误 A 现在是一个变量；</span></div><div class="line">abc=<span class="string">"A"</span> <span class="comment">//错误 A 现在是一个字符串</span></div></pre></td></tr></table></figure></p><p><strong>非打印字符</strong><br>单引号只适用于字符、数字、标点符号</p><ol><li><p>使用 ASCII<br><img src="http://ww1.sinaimg.cn/large/006rAlqhly1fl6gzyk6k6j30t30ki4qp.jpg" alt=""></p></li><li><p>转义序列<br><img src="http://ww1.sinaimg.cn/large/006rAlqhly1fl6gyn2gecj30q60dwwgp.jpg" alt=""></p></li></ol><p>打印警报<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line"><span class="keyword">char</span> a;</div><div class="line">a=<span class="string">'\a'</span>;</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,a); <span class="comment">//打印峰鸣声</span></div><div class="line"><span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;使用字符-char-类型&quot;&gt;&lt;a href=&quot;#使用字符-char-类型&quot; class=&quot;headerlink&quot; title=&quot;使用字符: char 类型&quot;&gt;&lt;/a&gt;使用字符: char 类型&lt;/h2&gt;&lt;p&gt;char 类型存储字符(8位存储单元)，从技术层面看，c
+      
+    
+    </summary>
+    
+      <category term="C语言" scheme="http://blog.didiaoyuan.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="C语言" scheme="http://blog.didiaoyuan.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>C语言复习(二)</title>
