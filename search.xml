@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[C语言复习(三)]]></title>
     <url>%2F2017%2F11%2F04%2FC%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0-%E4%B8%89%2F</url>
-    <content type="text"><![CDATA[使用字符: char 类型char 类型存储字符(8位存储单元)，从技术层面看，char 是整数类型。ASCII(0~127;只需 8 位的存储单元) 编码 比如：A用整数 65 代表。因此，存储字母 A 实际上存储的是整数 65 字符常量和初始化 如果要把一个字符常量初始化为字母A，不必背下 ASCII 码。用单引号括起来的单个字符被称为字符常量，编译器一发现’A’，就会将其转换成相应的代码值。单引号必不可少1234char abc; //声明char 类型abc='A' //正确abc=A //错误 A 现在是一个变量；abc="A" //错误 A 现在是一个字符串 非打印字符单引号只适用于字符、数字、标点符号 使用 ASCII 转义序列 打印警报12345678#include &lt;stdio.h&gt;int main(void)&#123; char a; a='\a'; printf("%c",a); //打印峰鸣声 return 0;&#125;]]></content>
+    <content type="text"><![CDATA[使用字符: char 类型char 类型存储字符(8位存储单元)，从技术层面看，char 是整数类型。ASCII(0~127;只需 8 位的存储单元) 编码 比如：A用整数 65 代表。因此，存储字母 A 实际上存储的是整数 65 字符常量和初始化 如果要把一个字符常量初始化为字母A，不必背下 ASCII 码。用单引号括起来的单个字符被称为字符常量，编译器一发现’A’，就会将其转换成相应的代码值。单引号必不可少1234char abc; //声明char 类型abc='A' //正确abc=A //错误 A 现在是一个变量；abc="A" //错误 A 现在是一个字符串 非打印字符单引号只适用于字符、数字、标点符号 使用 ASCII 转义序列 打印警报12345678#include &lt;stdio.h&gt;int main(void)&#123; char a; a='\a'; printf("%c",a); //打印峰鸣声 return 0;&#125; %c 和 %d 有符号还是无符号 有些 C编译器把 char 实现为有符号类型，表示范围 -128~127 有些 C编译器把 char 实现为无符号类型，表示范围 0~255]]></content>
       <categories>
         <category>C语言</category>
       </categories>
