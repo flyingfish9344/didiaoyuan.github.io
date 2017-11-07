@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[C语言复习(四)]]></title>
     <url>%2F2017%2F11%2F07%2FC%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0-%E5%9B%9B%2F</url>
-    <content type="text"><![CDATA[_Bool类型c99标准添加了 _Bool 类型，用于表示布尔值（true 和 false）。因为 C 语言用值 1 表示 true，值 0 表示 false，所以 _Bool类型实际上也是一种整数类型 可移植类型: stdint.h和 inttypes.hc99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。2]]></content>
+    <content type="text"><![CDATA[_Bool类型c99标准添加了 _Bool 类型，用于表示布尔值（true 和 false）。因为 C 语言用值 1 表示 true，值 0 表示 false，所以 _Bool类型实际上也是一种整数类型 可移植类型: stdint.h和 inttypes.hc99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。 C语言为现有类型创建了很多类型名。 精确宽度整数类型 int32_t 最小宽度类型 int_least8_t 最快的类型 int_fast8_t 最大的有符号整数类型 intmax_t printf() 打印特定类型时要求与相应的转换说明匹配。1234567891011#include &lt;stdio.h&gt;#include &lt;inttypes.h&gt; //支持可移植整数类型名int main(void)&#123; int32_t me32; //me32是一个32位有符号整型变量 me32=45933945; printf("%d \n",me32); printf("%" PRId32"",me32); //PRId32字符串宏 getchar(); return 0;&#125; printf(“%” PRId32””,me32);等价于 printf(“%”d””,me32); c99/c11 的支持中，一些编译器任未实现 inttypes.h 头文件及其相关功能 扩展整数类型stdint.h和inttypes.h]]></content>
       <categories>
         <category>C语言</category>
       </categories>

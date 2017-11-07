@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="_Bool类型c99标准添加了 _Bool 类型，用于表示布尔值（true 和 false）。因为 C 语言用值 1 表示 true，值 0 表示 false，所以 _Bool类型实际上也是一种整数类型 可移植类型: stdint.h和 inttypes.hc99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。2">
+<meta name="description" content="_Bool类型c99标准添加了 _Bool 类型，用于表示布尔值（true 和 false）。因为 C 语言用值 1 表示 true，值 0 表示 false，所以 _Bool类型实际上也是一种整数类型 可移植类型: stdint.h和 inttypes.hc99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。 C语言为现有类型创建了很多类型">
 <meta name="keywords" content="C语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言复习(四)">
 <meta property="og:url" content="http://blog.didiaoyuan.com/2017/11/07/C语言复习-四/index.html">
 <meta property="og:site_name" content="仙人掌的博客">
-<meta property="og:description" content="_Bool类型c99标准添加了 _Bool 类型，用于表示布尔值（true 和 false）。因为 C 语言用值 1 表示 true，值 0 表示 false，所以 _Bool类型实际上也是一种整数类型 可移植类型: stdint.h和 inttypes.hc99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。2">
+<meta property="og:description" content="_Bool类型c99标准添加了 _Bool 类型，用于表示布尔值（true 和 false）。因为 C 语言用值 1 表示 true，值 0 表示 false，所以 _Bool类型实际上也是一种整数类型 可移植类型: stdint.h和 inttypes.hc99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。 C语言为现有类型创建了很多类型">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-07T10:23:11.056Z">
+<meta property="og:updated_time" content="2017-11-07T15:40:52.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言复习(四)">
-<meta name="twitter:description" content="_Bool类型c99标准添加了 _Bool 类型，用于表示布尔值（true 和 false）。因为 C 语言用值 1 表示 true，值 0 表示 false，所以 _Bool类型实际上也是一种整数类型 可移植类型: stdint.h和 inttypes.hc99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。2">
+<meta name="twitter:description" content="_Bool类型c99标准添加了 _Bool 类型，用于表示布尔值（true 和 false）。因为 C 语言用值 1 表示 true，值 0 表示 false，所以 _Bool类型实际上也是一种整数类型 可移植类型: stdint.h和 inttypes.hc99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。 C语言为现有类型创建了很多类型">
 
 
 
@@ -437,7 +437,20 @@
 
       
         <h1 id="Bool类型"><a href="#Bool类型" class="headerlink" title="_Bool类型"></a>_Bool类型</h1><p>c99标准添加了 _Bool 类型，用于表示布尔值（true 和 false）。因为 C 语言用值 1 表示 true，值 0 表示 false，所以 _Bool<br>类型实际上也是一种整数类型</p>
-<h1 id="可移植类型-stdint-h和-inttypes-h"><a href="#可移植类型-stdint-h和-inttypes-h" class="headerlink" title="可移植类型: stdint.h和 inttypes.h"></a>可移植类型: stdint.h和 inttypes.h</h1><p>c99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。2</p>
+<h1 id="可移植类型-stdint-h和-inttypes-h"><a href="#可移植类型-stdint-h和-inttypes-h" class="headerlink" title="可移植类型: stdint.h和 inttypes.h"></a>可移植类型: stdint.h和 inttypes.h</h1><p>c99提供了两个头文件 stdint.h 和 inttypes.h 以确保 C语言的类型在各系统中的功能相同。</p>
+<p>C语言为现有类型创建了很多类型名。</p>
+<ol>
+<li>精确宽度整数类型 int32_t</li>
+<li>最小宽度类型 int_least8_t</li>
+<li>最快的类型 int_fast8_t</li>
+<li>最大的有符号整数类型 intmax_t</li>
+</ol>
+<p>printf() 打印特定类型时要求与相应的转换说明匹配。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;inttypes.h&gt; //支持可移植整数类型名</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int32_t</span> me32;  <span class="comment">//me32是一个32位有符号整型变量</span></div><div class="line">	me32=<span class="number">45933945</span>;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d \n"</span>,me32);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%"</span> PRId32<span class="string">""</span>,me32); <span class="comment">//PRId32字符串宏</span></div><div class="line">	getchar();</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>printf(“%” PRId32””,me32);<br>等价于 printf(“%”d””,me32);</p>
+<blockquote>
+<p>c99/c11 的支持中，一些编译器任未实现 inttypes.h 头文件及其相关功能</p>
+</blockquote>
+<p><a href="http://blog.csdn.net/zhoudaxia/article/details/4704766" target="_blank" rel="external">扩展整数类型stdint.h和inttypes.h</a></p>
 
       
     </div>
