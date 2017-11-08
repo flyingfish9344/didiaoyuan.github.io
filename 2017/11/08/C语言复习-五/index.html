@@ -100,7 +100,8 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1flb1lvn8uwj30qb067ab5.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1flb3q48eagj30a60473yf.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1flb3wnl0loj308101c0o7.jpg">
-<meta property="og:updated_time" content="2017-11-08T15:51:37.930Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006rAlqhly1flb49n9h2bj307q035t8k.jpg">
+<meta property="og:updated_time" content="2017-11-08T16:02:41.982Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言复习(五)">
 <meta name="twitter:description" content="float、double、long double浮点数多用于金融和数学的程序。浮点数类型能表示包括小数在内更大范围的数。浮点数表示类似于科学记数法(即用小数乘以10的幂来表示数字)。 float C标准规定，float 类型必须至少能表示6位有效数字，且取值范围至少是10^-37~10^38。系统要存储一个浮点数要占用32位。其中8位表示指数的值和符号，剩下24位用于表示非指数部分(也叫做尾数或有">
@@ -477,7 +478,9 @@
 <blockquote>
 <p>例 如， 给 asin() 函 数 传 递 一 个 值， 该 函 数 将 返 回 一 个 角 度， 该 角 度 的 正 弦 就 是 传 入 函 数 的 值。 但 是 正 弦 值 不 能 大 于 1， 因 此， 如 果 传 入 的 参 数 大 于 1， 该 函 数 的 行 为 是 未 定 义 的。 在 这 种 情 况 下， 该 函 数 将 返 回 NaN 值， printf() 函 数 可 将 其 显 示 为 nan、 NaN 或 其 他 类 似 的 内 容。<br>[美]史蒂芬·普拉达（Stephen Prata）. CPrimer Plus（第6版）中文版 (Kindle 位置 1840-1842). 人民邮电出版社.</p>
 </blockquote>
-<p><strong>浮点数的舍入错误</strong></p>
+<p><strong>浮点数的舍入错误</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">float</span> a,b;</div><div class="line">	a=<span class="number">2.0e20</span> +<span class="number">1.0</span>;</div><div class="line">	b=a<span class="number">-2.0e20</span>;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%f \n"</span>,b);</div><div class="line">	getchar();</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/mw690/006rAlqhly1flb49n9h2bj307q035t8k.jpg" alt=""></p>
+<p>出现这种问题的原因：flaot 的数字只能存储按指数比例缩放或放大的 6或7位有效数字。上面是20位，如果加1就是21位，所以出现错误</p>
 <blockquote>
 <p>大部分总结的内容出自《C Primer Plus 》 书中。总结是为了方便本人理解与学习</p>
 </blockquote>
