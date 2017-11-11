@@ -89,20 +89,20 @@
 
 
 
-<meta name="description" content="其他整数类型3修饰基本整数类型  short long unsigned   short int 或者 short 占用存储空间可能比 int 类型少 long int 或者 long 占用存储空间比 int 多 long long int 或 long long (C99标准加入) 占用的存储空间可能比 long 多。至少占用 64 位。 unsigned int 或 unsigned 只用于非">
+<meta name="description" content="其他整数类型修饰基本整数类型  short long unsigned   short int 或者 short 占用存储空间可能比 int 类型少 long int 或者 long 占用存储空间比 int 多 long long int 或 long long (C99标准加入) 占用的存储空间可能比 long 多。至少占用 64 位。 unsigned int 或 unsigned 只用于非负">
 <meta name="keywords" content="C语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言复习(二)">
 <meta property="og:url" content="http://blog.didiaoyuan.com/2017/11/03/C语言复习-二/index.html">
 <meta property="og:site_name" content="仙人掌的博客">
-<meta property="og:description" content="其他整数类型3修饰基本整数类型  short long unsigned   short int 或者 short 占用存储空间可能比 int 类型少 long int 或者 long 占用存储空间比 int 多 long long int 或 long long (C99标准加入) 占用的存储空间可能比 long 多。至少占用 64 位。 unsigned int 或 unsigned 只用于非">
+<meta property="og:description" content="其他整数类型修饰基本整数类型  short long unsigned   short int 或者 short 占用存储空间可能比 int 类型少 long int 或者 long 占用存储空间比 int 多 long long int 或 long long (C99标准加入) 占用的存储空间可能比 long 多。至少占用 64 位。 unsigned int 或 unsigned 只用于非负">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006rAlqhly1fl508o9vw1j30ad02q745.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006rAlqhly1fl50q1a0gkj30cn04cmx7.jpg">
-<meta property="og:updated_time" content="2017-11-03T09:23:02.099Z">
+<meta property="og:updated_time" content="2017-11-11T10:20:34.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言复习(二)">
-<meta name="twitter:description" content="其他整数类型3修饰基本整数类型  short long unsigned   short int 或者 short 占用存储空间可能比 int 类型少 long int 或者 long 占用存储空间比 int 多 long long int 或 long long (C99标准加入) 占用的存储空间可能比 long 多。至少占用 64 位。 unsigned int 或 unsigned 只用于非">
+<meta name="twitter:description" content="其他整数类型修饰基本整数类型  short long unsigned   short int 或者 short 占用存储空间可能比 int 类型少 long int 或者 long 占用存储空间比 int 多 long long int 或 long long (C99标准加入) 占用的存储空间可能比 long 多。至少占用 64 位。 unsigned int 或 unsigned 只用于非负">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006rAlqhly1fl508o9vw1j30ad02q745.jpg">
 
 
@@ -439,7 +439,7 @@
       
 
       
-        <h2 id="其他整数类型"><a href="#其他整数类型" class="headerlink" title="其他整数类型"></a>其他整数类型</h2><p><strong>3修饰基本整数类型</strong></p>
+        <h2 id="其他整数类型"><a href="#其他整数类型" class="headerlink" title="其他整数类型"></a>其他整数类型</h2><p><strong>修饰基本整数类型</strong></p>
 <ol>
 <li>short</li>
 <li>long</li>
@@ -487,7 +487,7 @@
 <blockquote>
 <p>如果要把一个较小的常量当做 long 类型。在值得末尾加上l或L</p>
 </blockquote>
-<p><strong>整数溢出</strong></p>
+<p><strong>整数溢出 </strong></p>
 <p>如果整数超出类型的取值范围会怎么样？</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> i=<span class="number">2147483647</span>;</div><div class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> j = <span class="number">4294967295</span>;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d %d \n"</span>,i,i+<span class="number">1</span>,i+<span class="number">2</span>	);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%u %u %u \n"</span>,j,j+<span class="number">1</span>,j+<span class="number">2</span>	);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/006rAlqhly1fl508o9vw1j30ad02q745.jpg" alt=""></p>
