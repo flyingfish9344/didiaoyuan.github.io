@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[慢慢]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%85%A2%E6%85%A2-1%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[慢慢]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%85%A2%E6%85%A2%2F</url>
+    <content type="text"><![CDATA[连续几天没有写博客，也没有去敲代码，这几天状态超级差，逃避的在宿舍呆了三天，这三天什么都不想，就是各种耗时间。 窒息每天都很忙的去学习，喜欢的东西又不能真正的去认真花时间研究，本以为上了大学能有自己的空间，其实就是扯淡，我很庆幸自己上的专科，没有本科那种各种课程，唯一遗憾的就是确实没有本科学的那么扎实，教学质量那么好，好了不吐槽了。知道我自己在专科的劣势，我每天都希望自己过的很充实，最起码毕业了能学到点东西，可是，都大三了，每天还是那么多事，不是学校让干这个就是自己需要准备这个那个的，这几天我真的逼疯了。我不想考虑学习的事情，不想考虑比赛，不想考虑六级考试，不想考虑升学考试…..我就这样在宿舍呆了三天，没有出去，吃饭都让舍友带饭，自己就不断地打游戏，看电影，明明很累了，头疼我都不停下来。 逃避三天，我没有理任何人，然后，第一次被女朋友狠狠的训斥了一番，点醒了自己。从小到大，每当我遇到无法解决的问题，我总是逃避，虽然我一直不承认自己是在逃避么我总觉得是我累了，需要好好放松一下就好了，可是往往就是让自己越来越累，我根本就没有想着如何处理，只是觉得休息一下就好。说到底，就是适应能力太差，从第一次经历喜欢的老师走了，然后开始不好好学习，更新老师对着干，到高中不喜欢高中的人与人之间冷漠的关系，自己跟自己赌气，明明不瞌睡，却就是不想听课。不喜欢宿舍生活，各种闹腾想回家，这些年让父母操碎了心，可是这个问题我一直逃避。结果就是没隔一段是时间我总是发一阵分，对任何人不理不睬，只想逃避，只想着找个安静的地方。可是每次发泄完，我又开始重复的那些工作，然后等待下一次爆发。 反思当被她说出自己最关键的问题，]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C语言复习(六)]]></title>
     <url>%2F2017%2F11%2F09%2FC%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0-%E5%85%AD%2F</url>
     <content type="text"><![CDATA[其他类型C语言还有一些从基本类型衍生的其他类型，包括数组、指针、结构和联合。 小节-关键字： 基本数据类型由 11 个关键字组成: int、long、short、unsigned、char、float、double、signed、_Bool、_Complex 和 _Imaginary 有符号整型 表示正整数和负整数， int 为系统给定的基本整数类型。C语言规定int 类型不少于 16位 short或 short int 最大的 short 整数小于或等于最大的int类型整数。C语言规定 short 类型至少占32位。 long long 或 long long int 该类型整数大于或等于最大的int 类型整数。C语言规定 long long 类型至少占 32位 无符号整型 无符号整型表示零或正整数。无符号整型表示方法 unsignedint unsigned long unsigned short 字符类型 打印出来的符号(A、&amp;he1+)都是字符 char 布尔类型 C语言用 1表示 true，0 表示 false。 _Bool 类型是无符号int 类型 实浮点类型 float 可精确至少位有效数字 double 存储浮点数范围大，至少10位有效数字和更大指数 long long 存储浮点数 的范围比 double 更大，能把表示比 double 更多的邮箱数字和更大的指数。 类型大小使用 sizeof()内置运算符 知道指定类型的大小。打印类型大小使用 %zd 占位符表示（C99）12345678910111213#include &lt;stdio.h&gt;int main(void)&#123; printf("%zd \n",sizeof(int)); printf("%zd \n",sizeof(char)); printf("%zd \n",sizeof(long)); printf("%zd \n",sizeof(long long)); printf("%zd \n",sizeof(float)); printf("%zd \n",sizeof(double)); printf("%zd \n",sizeof(long double)); getchar(); return 0;&#125; 输出结果表示的是不同类型的字节，比如 char 一定为 1 字节 ，char 类型 为 16 位 ，double 为 64 位的系统中，sizeof 给出的 double 字节为 4。（4*16=64） 参数和陷阱printf(),””里面的内容表示参数，一般参数都用 ， 分割。一般注意，使用数据类型要判断具体使用哪一种，在使用 printf 还要注意参数匹配问题，有些会出现参数多了，参数少了，匹配的占位符与参数类型不同的等问题，会根据不同的编译器，报不同的错误！]]></content>
